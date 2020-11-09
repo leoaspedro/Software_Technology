@@ -1,0 +1,71 @@
+<h4 class="title is-4">Shopping Cart</h4>
+
+<div class="columns" *ngFor="let product of products; let i = index">
+  <div class="column is-narrow">
+    <figure class="image is-128x128">
+      <img [src]="product.imageUrl" />
+    </figure>
+  </div>
+  <span class="column centerContent has-text-weight-bold">
+    <a [routerLink]="['/product', product.url]">{{ product.title }}</a>
+  </span>
+  <div class="column centerContent is-narrow">
+    <span class="tag is-dark" *ngIf="!product.isDayDeal"
+      >${{ product.price }}</span
+    >
+    <div class="tags has-addons" *ngIf="product.isDayDeal">
+      <span class="tag is-danger">${{ product.discountPrice }}</span>
+      <span class="tag is-white has-text-danger has-text-weight-semibold"
+        >-{{
+          getDiscountPercentage(product.discountPrice, product.price)
+        }}%</span
+      >
+    </div>
+  </div>
+
+  <div class="column centerContent is-narrow">
+    <div class="field has-addons">
+      <p class="control">
+        <button
+          class="button"
+          (click)="changeQuantity('lower', i)"
+          [disabled]="product.quantity <= 1"
+        >
+          <span class="icon is-small">
+            <i class="fas fa-minus"></i>
+          </span>
+        </button>
+      </p>
+      <p class="control">
+        <a class="button">
+          <span>{{ product.quantity }}</span>
+        </a>
+      </p>
+      <p class="control">
+        <button
+          class="button"
+          (click)="changeQuantity('add', i)"
+          [disabled]="product.orgQuantity <= product.quantity"
+        >
+          <span class="icon is-small">
+            <i class="fas fa-plus"></i>
+          </span>
+        </button>
+      </p>
+    </div>
+  </div>
+
+  <div class="column centerContent is-narrow">
+    <span class="icon" (click)="removeProduct(i)" style="cursor: pointer">
+      <i class="fas fa-times"></i>
+    </span>
+  </div>
+</div>
+
+<div *ngIf="products.length < 1">
+  <empty-state
+    [hasBox]="false"
+    [icon]="'fa-shopping-cart'"
+    [message]="'Your shopping cart is empty.'"
+  ></empty-state>
+</div>

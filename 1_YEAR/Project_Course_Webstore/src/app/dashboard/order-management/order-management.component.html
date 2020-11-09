@@ -1,0 +1,67 @@
+<div class="container" style="margin-bottom: 6rem">
+  <section class="hero">
+    <div class="hero-body">
+      <h1 class="title">
+        Order Management
+      </h1>
+      <h2 class="subtitle">
+        Overview of all orders.
+      </h2>
+    </div>
+  </section>
+  <div
+    *ngIf="openOrders$; let openOrders; else: loadingOpenOrders"
+    style="margin-bottom:1rem;"
+  >
+    <section class="hero">
+      <div class="hero-body">
+        <h2 class="title is-5">
+          <i class="fas fa-cube" style="margin-right: 0.25rem"></i> Open orders:
+          <span class="has-text-weight-semibold">{{ openOrders.length }}</span>
+        </h2>
+      </div>
+    </section>
+    <app-order-items [orders]="openOrders"></app-order-items>
+    <div *ngIf="openOrders.length === 0">
+      <empty-state
+        [hasBox]="true"
+        [icon]="'fa-list'"
+        [message]="'No open orders found.'"
+      ></empty-state>
+    </div>
+  </div>
+  <ng-template #loadingOpenOrders>
+    <section class="section has-text-centered">
+      <a class="button is-large is-rounded is-loading"></a>
+    </section>
+  </ng-template>
+  <div
+    *ngIf="processedOrders$; let processedOrders; else: loadingShippedOrders"
+    style="margin-bottom:1rem;"
+  >
+    <section class="hero">
+      <div class="hero-body">
+        <h2 class="title is-5">
+          <i class="fas fa-shipping-fast" style="margin-right: 0.25rem"></i>
+          Processed orders:
+          <span class="has-text-weight-semibold">{{
+            processedOrders.length
+          }}</span>
+        </h2>
+      </div>
+    </section>
+    <app-order-items [orders]="processedOrders"></app-order-items>
+    <div *ngIf="processedOrders.length === 0">
+      <empty-state
+        [hasBox]="true"
+        [icon]="'fa-list'"
+        [message]="'No shipped orders found.'"
+      ></empty-state>
+    </div>
+  </div>
+  <ng-template #loadingShippedOrders>
+    <section class="section has-text-centered">
+      <a class="button is-large is-rounded is-loading"></a>
+    </section>
+  </ng-template>
+</div>

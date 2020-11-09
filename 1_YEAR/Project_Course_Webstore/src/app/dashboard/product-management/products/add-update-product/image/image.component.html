@@ -1,0 +1,7 @@
+<div *ngIf="percentage$ | async; else loading"></div>
+
+<ng-template #loading>
+  <figure class="image is-128x128 picsingle">
+    <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+  </figure>
+</ng-template>

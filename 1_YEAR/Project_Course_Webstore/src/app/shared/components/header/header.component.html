@@ -1,0 +1,214 @@
+<search [isActive]="isModalActive" (deactivate)="toggleSearchModal()"></search>
+<header>
+  <nav
+    class="navbar has-shadow is-spaced"
+    role="navigation"
+    aria-label="main navigation"
+  >
+    <div class="container">
+      <div class="navbar-brand">
+        <h1 class="navbar-item">
+          <img id="logo" src="assets/img/logo.jpg" />
+          <strong>Bikeshop</strong>
+        </h1>
+
+        <a
+          role="button"
+          id="burgerButton"
+          class="navbar-burger burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+          [class.is-active]="showBurgerMenu"
+          (click)="showBurgerMenu = !showBurgerMenu"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div
+        id="navbarBasicExample"
+        class="navbar-menu "
+        [class.is-active]="showBurgerMenu"
+      >
+        <div class="navbar-start">
+          <a routerLink="/" class="navbar-item">
+            Startpage
+          </a>
+
+          <!-- Bikes -->
+          <div class="navbar-item has-dropdown is-hoverable">
+            <div class="navbar-link">
+              Bikes
+            </div>
+            <div class="navbar-dropdown" data-style="width: 18rem;">
+              <div class="columns">
+                <div class="column" *ngIf="bikes$ | async; let bikes">
+                  <div *ngFor="let bike of bikes">
+                    <a
+                      class="navbar-item"
+                      [routerLink]="['/products', 'bikes', bike.url]"
+                    >
+                      <div class="navbar-content">
+                        <h1 class="title is-6 is-mega-menu-title">
+                          {{ bike.name }}
+                        </h1>
+                      </div>
+                    </a>
+                  </div>
+                  <hr class="navbar-divider" />
+                  <a class="navbar-item" [routerLink]="['/products', 'bikes']">
+                    View all bikes
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Accessories -->
+          <div class="navbar-item has-dropdown is-hoverable">
+            <div class="navbar-link">
+              Accessories
+            </div>
+            <div class="navbar-dropdown" data-style="width: 18rem;">
+              <div class="columns">
+                <div
+                  class="column"
+                  *ngIf="accessories$ | async; let accessories"
+                >
+                  <div *ngFor="let accessory of accessories">
+                    <a
+                      class="navbar-item"
+                      [routerLink]="['/products', 'accessories', accessory.url]"
+                    >
+                      <div class="navbar-content">
+                        <h1 class="title is-6 is-mega-menu-title">
+                          {{ accessory.name }}
+                        </h1>
+                      </div>
+                    </a>
+                  </div>
+                  <hr class="navbar-divider" />
+                  <a
+                    class="navbar-item"
+                    [routerLink]="['/products', 'accessories']"
+                  >
+                    View all accessories
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Parts -->
+          <div class="navbar-item has-dropdown is-hoverable">
+            <div class="navbar-link">
+              Parts
+            </div>
+            <div class="navbar-dropdown" data-style="width: 18rem;">
+              <div class="columns">
+                <div class="column" *ngIf="parts$ | async; let parts">
+                  <div *ngFor="let part of parts">
+                    <a
+                      class="navbar-item"
+                      [routerLink]="['/products', 'parts', part.url]"
+                    >
+                      <div class="navbar-content">
+                        <h1 class="title is-6 is-mega-menu-title">
+                          {{ part.name }}
+                        </h1>
+                      </div>
+                    </a>
+                  </div>
+                  <hr class="navbar-divider" />
+                  <a class="navbar-item" [routerLink]="['/products', 'parts']">
+                    View all parts
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons" [class.is-centered]="showBurgerMenu">
+              <a class="button is-white" (click)="toggleSearchModal()">
+                <span class="icon">
+                  <i class="fas fa-search"></i>
+                </span>
+                <span *ngIf="showBurgerMenu">Search</span>
+              </a>
+              <a
+                routerLink="/checkout"
+                class="button is-white has-badge-rounded has-badge-dark"
+                *ngIf="!isAdmin && shoppingCartAmount > 0"
+                id="cartBtn"
+                [attr.data-badge]="shoppingCartAmount"
+              >
+                <span class="icon">
+                  <i class="fas fa-shopping-cart is-dark"></i>
+                </span>
+                <span *ngIf="showBurgerMenu">Shopping Cart</span>
+              </a>
+              <a
+                routerLink="/checkout"
+                class="button is-white"
+                *ngIf="!isAdmin && shoppingCartAmount === 0"
+              >
+                <span class="icon">
+                  <i class="fas fa-shopping-cart"></i>
+                </span>
+                <span *ngIf="showBurgerMenu">Shopping Cart</span>
+              </a>
+              <button
+                id="primary-login"
+                (click)="toggleModal()"
+                class="button"
+                *ngIf="!isLoggedIn"
+              >
+                Login
+              </button>
+              <a
+                routerLink="/dashboard"
+                class="button"
+                *ngIf="isLoggedIn && isAdmin"
+              >
+                Dashboard
+              </a>
+            </div>
+          </div>
+          <div *ngIf="userDetails">
+            <div
+              class="navbar-item has-dropdown is-hoverable"
+              *ngIf="isLoggedIn"
+            >
+              <a class="navbar-link">
+                <span id="adminID" *ngIf="isAdmin">{{ userDetails.name }}</span>
+                <span id="customerID" *ngIf="!isAdmin">{{
+                  userDetails.name
+                }}</span>
+              </a>
+
+              <div class="navbar-dropdown is-boxed is-right">
+                <a
+                  id="orders"
+                  *ngIf="!isAdmin"
+                  class="navbar-item"
+                  routerLink="/my-orders"
+                >
+                  My orders
+                </a>
+                <a id="logout" class="navbar-item" (click)="logout()">
+                  Logout
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

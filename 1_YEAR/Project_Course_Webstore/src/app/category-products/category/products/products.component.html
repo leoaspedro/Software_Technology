@@ -1,0 +1,8 @@
+<div class="columns is-multiline">
+  <div class="column is-one-quarter" *ngFor="let product of products">
+    <product-item
+      [isModeCustomerView]="true"
+      [product]="product"
+    ></product-item>
+  </div>
+</div>

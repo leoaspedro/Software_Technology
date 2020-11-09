@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eye:EyeStream
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:eye="http://www.eclipse.org/mdt/ocl/oclinecore/library"
+    xsi:schemaLocation="http://www.eclipse.org/mdt/ocl/oclinecore/library EyeStream.ecore">
+  <videos name="Insidious:Last Key"
+      duration="1h 30min"
+      release_Date="0011-06-10T00:00:00.000+0100"
+      size="2Gb">
+    <type>Movie</type>
+  </videos>
+  <videos name="Marvel End:Game"
+      duration="3h 1min"
+      release_Date="0011-07-12T00:00:00.000+0100"
+      size="2.5Gb">
+    <type>Movie</type>
+  </videos>
+  <users first_name="Leonardo"
+      last_name="Pedro"
+      ID="1"
+      email="user1@gmail.com"
+      country="Portugal"/>
+  <users first_name="Loic"
+      last_name="Galland"
+      ID="2"
+      email="user2@gmail.com"
+      country="France"
+      videos="//@videos.1"/>
+  <subscriptions
+      first_payment_DATE="0009-07-12T00:00:00.000+0100"
+      user="//@users.0"/>
+  <subscriptions
+      first_payment_DATE="0009-07-12T00:00:00.000+0100"
+      user="//@users.1"/>
+</eye:EyeStream>

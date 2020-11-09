@@ -1,0 +1,144 @@
+<h4 class="title is-4">Customer Data</h4>
+<div *ngIf="isLoggedIn">
+  <form [formGroup]="form">
+    <label class="label">E-Mail address</label>
+    <div class="columns">
+      <div class="column">
+        <div class="field">
+          <div class="control" [ngClass]="{ 'is-loading': !userDetails }">
+            <input
+              class="input"
+              type="text"
+              formControlName="email"
+              [value]="userDetails?.email"
+              placeholder="E-Mail address"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="devider"></div>
+    <label class="label">Shipping address</label>
+    <div class="columns">
+      <div class="column">
+        <div class="field">
+          <div class="control" [ngClass]="{ 'is-loading': !userDetails }">
+            <input
+              class="input"
+              type="text"
+              [value]="userDetails?.name"
+              formControlName="fullname"
+              placeholder="Full name"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column">
+        <div class="field">
+          <div class="control" [ngClass]="{ 'is-loading': !userDetails }">
+            <input
+              class="input"
+              type="text"
+              [value]="userDetails?.address"
+              formControlName="address"
+              placeholder="Address"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column">
+        <div class="field">
+          <div class="control">
+            <div
+              class="select is-fullwidth"
+              [ngClass]="{ 'is-loading': !userDetails }"
+            >
+              <select formControlName="country">
+                <option [selected]="userDetails?.country === 'Norway'"
+                  >Norway</option
+                >
+                <option [selected]="userDetails?.country === 'Sweden'"
+                  >Sweden</option
+                >
+                <option [selected]="userDetails?.country === 'Finland'"
+                  >Finland</option
+                >
+                <option [selected]="userDetails?.country === 'Denmark'"
+                  >Denmark</option
+                >
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="field">
+          <div class="control" [ngClass]="{ 'is-loading': !userDetails }">
+            <input
+              class="input"
+              type="text"
+              [value]="userDetails?.city"
+              formControlName="city"
+              placeholder="City"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="field">
+          <div class="control" [ngClass]="{ 'is-loading': !userDetails }">
+            <input
+              class="input"
+              type="text"
+              [value]="userDetails?.postal"
+              formControlName="zip"
+              placeholder="ZIP"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="devider"></div>
+    <div class="columns">
+      <div class="column">
+        <a class="button is-white" (click)="previousStep()">
+          <span class="icon">
+            <i class="fas fa-chevron-left"></i>
+          </span>
+          <span>Shopping Cart</span></a
+        >
+      </div>
+      <div class="column is-narrow">
+        <button
+          class="button is-link"
+          type="button"
+          [disabled]="form.invalid"
+          (click)="nextStep()"
+        >
+          <span>
+            Select shipping
+          </span>
+          <span class="icon">
+            <i class="fas fa-chevron-right"></i>
+          </span>
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<section class="section has-text-centered" *ngIf="!isLoggedIn">
+  <span class="icon is-large has-text-grey">
+    <i class="fas fa-lg fa-user-shield"></i>
+  </span>
+  <h3 class="subtitle is-size-5 has-text-grey">
+    Please login to continue with the order process.
+  </h3>
+  <button id="primary-login" (click)="toggleModal()" class="button">
+    Login
+  </button>
+</section>

@@ -1,0 +1,41 @@
+<div *ngFor="let order of orders">
+  <div class="columns">
+    <div class="column">
+      <div class="box">
+        <div class="columns">
+          <div class="column">
+            <p class="title is-4">Order No. {{ order.orderNumber }}</p>
+            <p class="subtitle is-6">
+              placed on {{ getDate(order.date.seconds) }}
+            </p>
+          </div>
+          <div class="column centerContent is-narrow">
+            <span
+              class="tag is-medium"
+              [ngClass]="{
+                'is-success': order.status === 'New',
+                'is-warning': order.status === 'Delayed',
+                'is-light': order.status === 'Shipped'
+              }"
+              >{{ order.status }}</span
+            >
+          </div>
+          <div class="column centerContent is-narrow">
+            <button
+              class="button"
+              [ngClass]="{
+                'is-loading': isLoading && order.id === this.toggleId
+              }"
+              (click)="toggleOrderDetails(order.id)"
+            >
+              Order details
+            </button>
+          </div>
+        </div>
+        <div *ngIf="order.id === this.toggleId">
+          <order-products [order]="order"></order-products>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

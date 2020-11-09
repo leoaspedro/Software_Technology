@@ -1,0 +1,100 @@
+<h4 class="title is-4">Confirmation</h4>
+
+<div class="columns">
+  <div class="column">
+    <p class="title is-5">Products ({{ products.length }})</p>
+  </div>
+</div>
+<div class="columns" *ngFor="let product of products; let i = index">
+  <div class="column is-narrow">
+    <figure class="image is-128x128">
+      <img [src]="product.imageUrl" />
+    </figure>
+  </div>
+  <span class="column centerContent has-text-weight-bold">
+    <a [routerLink]="['/product', product.url]">{{ product.title }}</a>
+  </span>
+  <div class="column centerContent is-narrow">
+    <span class="tag is-dark" *ngIf="!product.isDayDeal"
+      >${{ product.price }}</span
+    >
+    <div class="tags has-addons" *ngIf="product.isDayDeal">
+      <span class="tag is-danger">${{ product.discountPrice }}</span>
+      <span class="tag is-white has-text-danger has-text-weight-semibold"
+        >-{{
+          getDiscountPercentage(product.discountPrice, product.price)
+        }}%</span
+      >
+    </div>
+  </div>
+  <div class="column centerContent is-narrow">
+    <span class="tag is-medium is-white">x {{ product.quantity }}</span>
+  </div>
+  <div class="column centerContent is-narrow">
+    <span class="tag is-medium is-white" *ngIf="!product.isdaydeal"
+      >${{ (product.quantity * product.price).toFixed(2) }}</span
+    >
+    <span class="tag is-medium is-white" *ngIf="product.isdaydeal"
+      >${{ (product.quantity * product.discountPrice).toFixed(2) }}</span
+    >
+  </div>
+</div>
+
+<div class="devider"></div>
+
+<div class="columns">
+  <div class="column centerText">
+    <p class="title is-5">Shipping</p>
+    <p>{{ shippingMethod.name }}</p>
+    <p>Shipping time: approx. {{ shippingMethod.time }}</p>
+  </div>
+  <div class="column is-narrow">
+    <span class="tag is-medium is-white">${{ shippingCosts.toFixed(2) }}</span>
+  </div>
+</div>
+
+<div class="devider"></div>
+
+<div class="columns">
+  <div class="column centerText">
+    <p class="title is-5">Invoice amount</p>
+    <p>{{ paymentDetails.name }}</p>
+    <p>
+      <span><i class="far fa-credit-card"></i> </span>
+      **** {{ paymentDetails.number.slice(-4) }}
+    </p>
+    <p>Expires on: {{ paymentDetails.date }}</p>
+  </div>
+  <div class="column is-narrow">
+    <div class="tags has-addons">
+      <span class="tag is-white">(incl. VAT)</span>
+      <span class="tag is-medium is-white has-text-weight-semibold"
+        >${{ total.toFixed(2) }}</span
+      >
+    </div>
+  </div>
+</div>
+
+<div class="devider"></div>
+
+<div class="columns">
+  <div class="column">
+    <p class="title is-5">Customer Information</p>
+  </div>
+</div>
+<div class="columns">
+  <div class="column is-narrow">
+    <h6 class="title is-6">Shipping address</h6>
+    <p>{{ userDetails?.name }}</p>
+    <p>{{ userDetails?.address }}</p>
+    <p>{{ userDetails?.city }}, {{ userDetails?.postal }}</p>
+    <p>{{ userDetails?.country }}</p>
+  </div>
+  <div class="column is-narrow">
+    <h6 class="title is-6">Billing address</h6>
+    <p>{{ userDetails?.name }}</p>
+    <p>{{ userDetails?.address }}</p>
+    <p>{{ userDetails?.city }}, {{ userDetails?.postal }}</p>
+    <p>{{ userDetails?.country }}</p>
+  </div>
+</div>

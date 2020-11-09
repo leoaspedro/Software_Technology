@@ -1,0 +1,19 @@
+
+Csquid:S1168‹"+Return an empty collection instead of null.(¥¹ï
+isquid:S00116"QRename this field "UserID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(úžàÄ
+Œsquid:S1319K"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(‰ˆÄâþÿÿÿÿ
+isquid:S001170"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŠœÔÇ
+csquid:S2095p"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(¸÷Øæ
+asquid:S2259"JA "NullPointerException" could be thrown; "readMembers()" can return null.(µ•‚€
+_squid:S2095Q"HUse try-with-resources or close this "FileWriter" in a "finally" clause.(¦«âö
+;squid:S2153"Remove the boxing to "Integer".(òÑ¯Œüÿÿÿÿ
+@squid:S1148‰"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(á–Ì“
+jsquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(°ÙïÌþÿÿÿÿ
+msquid:S00116"VRename this field "member_List" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ž°¨L
+Usquid:S1155">Use isEmpty() to check whether the collection is empty or not.(µ•‚€
+ksquid:S00100K"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰ˆÄâþÿÿÿÿ
+Zsquid:S1155U">Use isEmpty() to check whether the collection is empty or not.(ßäÀƒøÿÿÿÿ
+esquid:S2259"IA "NullPointerException" could be thrown; "member_List" is nullable here.(òÑ¯Œüÿÿÿÿ
+?squid:S1148b"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+isquid:S00117m"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’²ÿÌ

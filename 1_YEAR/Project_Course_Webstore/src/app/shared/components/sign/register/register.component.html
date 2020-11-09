@@ -1,0 +1,349 @@
+<!--Login form, no functional onSubmit() currently exists-->
+<form [formGroup]="registerForm" class="is-clearfix">
+  <!--REGISTRATION PAGE 1-->
+  <div [style.display]="showDefault ? 'block' : 'none'">
+    <!--FULL NAME-->
+    <div class="field">
+      <label class="label">Name</label>
+      <div class="control has-icons-left">
+        <input
+          class="input"
+          [ngClass]="{
+            'is-danger': registerForm.get('name').errors && hasNameError
+          }"
+          formControlName="name"
+          type="text"
+          placeholder="Enter your full name"
+          required
+          (focus)="showError('name', false)"
+          (blur)="showError('name', true)"
+        />
+        <span class="icon is-small is-left">
+          <i class="fas fa-user"></i>
+        </span>
+      </div>
+      <!--Error message container for Full Name-->
+      <span
+        *ngIf="registerForm.get('name').errors && hasNameError"
+        class="content is-small"
+        style="color:red"
+      >
+        <!--Error messages-->
+        <span *ngIf="registerForm.get('name').errors?.required">
+          Full name is required
+        </span>
+        <span *ngIf="registerForm.get('name').errors?.minlength">
+          Full name must be at least 2 characters long
+        </span>
+      </span>
+    </div>
+
+    <!--ADRESS-->
+    <div class="field">
+      <label class="label">Address</label>
+      <div class="control has-icons-left">
+        <input
+          class="input"
+          [ngClass]="{
+            'is-danger': registerForm.get('address').errors && hasAddressError
+          }"
+          formControlName="address"
+          type="text"
+          placeholder="Enter your address"
+          required
+          (focus)="showError('address', false)"
+          (blur)="showError('address', true)"
+        />
+        <span class="icon is-small is-left">
+          <i class="fas fa-address-book"></i>
+        </span>
+      </div>
+      <!--Error message container for Address-->
+      <div
+        *ngIf="registerForm.get('address').errors && hasAddressError"
+        class="content is-small"
+        style="color:red;margin-bottom: 0px;"
+      >
+        <!--Error messages-->
+        <span *ngIf="registerForm.get('address').errors?.required">
+          Address is required
+        </span>
+      </div>
+    </div>
+    <!--CITY AND POSTAL/ZIP CODE-->
+    <div class="field">
+      <div class="field-body">
+        <!--City-->
+        <div class="field">
+          <label class="label">City</label>
+          <div class="control has-icons-left">
+            <input
+              class="input"
+              [ngClass]="{
+                'is-danger': registerForm.get('city').errors && hasCityError
+              }"
+              formControlName="city"
+              type="text"
+              placeholder="City of residence"
+              required
+              (focus)="showError('city', false)"
+              (blur)="showError('city', true)"
+            />
+            <span class="icon is-small is-left">
+              <i class="fas fa-city"></i>
+            </span>
+          </div>
+          <!--Error message container for City-->
+          <div
+            *ngIf="registerForm.get('city').errors && hasCityError"
+            class="content is-small"
+            style="color:red;margin-bottom: 0px;"
+          >
+            <!--Error messages-->
+            <span *ngIf="registerForm.get('city').errors?.required">
+              City is required
+            </span>
+          </div>
+        </div>
+        <!--Postal/zip code-->
+        <div class="field">
+          <label class="label">Postal/ZIP</label>
+          <div class="control has-icons-left">
+            <input
+              class="input"
+              [ngClass]="{
+                'is-danger': registerForm.get('postal').errors && hasPostalError
+              }"
+              formControlName="postal"
+              oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+              type="number"
+              maxlength="5"
+              placeholder="Postal/ZIP code"
+              required
+              (focus)="showError('postal', false)"
+              (blur)="showError('postal', true)"
+            />
+            <span class="icon is-small is-left">
+              <i class="fas fa-map-pin"></i>
+            </span>
+          </div>
+          <!--Error message container for Postal/ZIP code-->
+          <div
+            *ngIf="registerForm.get('postal').errors && hasPostalError"
+            class="content is-small"
+            style="color:red;margin-bottom: 0px;"
+          >
+            <!--Error messages-->
+            <span *ngIf="registerForm.get('postal').errors?.required">
+              Postal/ZIP is required
+            </span>
+            <span *ngIf="registerForm.get('postal').errors?.max">
+              Postal/ZIP max length is 5 digits
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--COUNTRY SELECT-->
+    <div class="field">
+      <label class="label">Country</label>
+      <div class="control has-icons-left">
+        <div
+          class="select"
+          [ngClass]="{
+            'is-danger': registerForm.get('country').errors && hasCountryError
+          }"
+        >
+          <select
+            formControlName="country"
+            required
+            (focus)="showError('country', false)"
+            (blur)="showError('country', true)"
+          >
+            <option>Sweden</option>
+            <option>Norway</option>
+            <option>Finland</option>
+            <option>Denmark</option>
+          </select>
+        </div>
+        <span class="icon is-small is-left">
+          <i class="fas fa-globe"></i>
+        </span>
+      </div>
+      <!--Error message container for Postal/ZIP code-->
+      <div
+        *ngIf="registerForm.get('country').errors && hasCountryError"
+        class="content is-small"
+        style="color:red;margin-bottom: 0px;"
+      >
+        <!--Error messages-->
+        <span *ngIf="registerForm.get('country').errors?.required">
+          Country is required
+        </span>
+      </div>
+    </div>
+
+    <!--Next page button-->
+    <div class="field ">
+      <p class="control is-pulled-right">
+        <button
+          id="registerContinue"
+          type="button"
+          class="button"
+          (click)="showDefaultRegStep(false)"
+          [disabled]="!isFirstPageValid()"
+        >
+          <span>Continue</span>
+          <span class="icon">
+            <i class="fas fa-angle-right"></i>
+          </span>
+        </button>
+      </p>
+    </div>
+  </div>
+
+  <!--REGISTRATION PAGE 2-->
+  <div [style.display]="showDefault ? 'none' : 'block'">
+    <!--EMAIL-->
+    <div class="field">
+      <label class="label">Email</label>
+      <div class="control has-icons-left">
+        <input
+          class="input"
+          [ngClass]="{
+            'is-danger':
+              (registerForm.get('email').errors && hasEmailError) ||
+              emailAlreadyExists
+          }"
+          formControlName="email"
+          type="email"
+          placeholder="Enter your email address"
+          required
+          (focus)="showError('email', false)"
+          (blur)="showError('email', true)"
+        />
+        <span class="icon is-small is-left">
+          <i class="fas fa-envelope"></i>
+        </span>
+      </div>
+      <!--Error message container for Email-->
+      <span
+        *ngIf="
+          (registerForm.get('email').errors && hasEmailError) ||
+          emailAlreadyExists
+        "
+        class="content is-small"
+        style="color:red"
+      >
+        <!--Error messages-->
+        <span *ngIf="registerForm.get('email').errors?.required">
+          Email address is required
+        </span>
+        <span *ngIf="registerForm.get('email').errors?.email">
+          Incorrect email address format
+        </span>
+        <span *ngIf="emailAlreadyExists">
+          Email is already in use!
+        </span>
+      </span>
+    </div>
+    <!--PASSWORD 1-->
+    <div
+      class="field is-tooltip-info is-tooltip-multiline tooltip"
+      data-tooltip="A password must contain at least one lowercase letter, uppercase letter, number, special character and be 8-20 characters long."
+    >
+      <label class="label">Password</label>
+      <div class="control has-icons-left">
+        <input
+          class="input"
+          [ngClass]="{
+            'is-danger': registerForm.get('password').errors && hasPasswordError
+          }"
+          formControlName="password"
+          type="password"
+          placeholder="Enter your password"
+          required
+          (focus)="showError('password', false)"
+          (blur)="showError('password', true)"
+        />
+        <span class="icon is-small is-left">
+          <i class="fas fa-lock"></i>
+        </span>
+      </div>
+      <!--Error message container for Password-->
+      <span
+        *ngIf="registerForm.get('password').errors && hasPasswordError"
+        class="content is-small"
+        style="color:red"
+      >
+        <!--Error messages-->
+        <span *ngIf="registerForm.get('password').errors?.required">
+          Password is required
+        </span>
+        <span
+          *ngIf="
+            registerForm.get('password').errors?.passwordStrength ||
+            registerForm.get('password').errors?.minlength ||
+            registerForm.get('password').errors?.maxlength
+          "
+        >
+          Password is not strong enough, see tooltip!
+        </span>
+      </span>
+    </div>
+
+    <!--PASSWORD 2-->
+    <div class="field">
+      <label class="label">Re-enter password</label>
+      <div class="control has-icons-left">
+        <input
+          class="input"
+          name="password2"
+          #password2
+          [ngClass]="{
+            'is-danger': hasPasswordMatchError
+          }"
+          type="password"
+          placeholder="Re-enter your password"
+          required
+          (focus)="hasPasswordMatchError = false"
+          (blur)="comparePasswords(password2.value)"
+        />
+        <span class="icon is-small is-left">
+          <i class="fas fa-lock"></i>
+        </span>
+      </div>
+      <!--Error message for Password Matching-->
+      <span
+        *ngIf="hasPasswordMatchError"
+        class="content is-small"
+        style="color:red"
+      >
+        Passwords must match
+      </span>
+    </div>
+
+    <!--Previous page button-->
+    <button type="button" class="button" (click)="showDefaultRegStep(true)">
+      <span class="icon">
+        <i class="fas fa-angle-left"></i>
+      </span>
+      <span>Back</span>
+    </button>
+
+    <!--Register/form submit button-->
+    <button
+      id="registerSubmit"
+      (click)="onSubmit()"
+      type="button"
+      [ngClass]="{ 'is-loading': isLoading }"
+      class="button is-success is-pulled-right"
+      [disabled]="
+        !registerForm.valid || !passwordsAreValid || emailAlreadyExists
+      "
+    >
+      Register
+    </button>
+  </div>
+</form>

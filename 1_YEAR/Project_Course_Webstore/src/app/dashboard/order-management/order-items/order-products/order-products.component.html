@@ -1,0 +1,43 @@
+<div *ngIf="products$ | async as products">
+  <div class="columns" *ngFor="let product of products; let i = index">
+    <div class="column is-narrow">
+      <figure class="image is-128x128">
+        <img [src]="product.coverImage.imageUrl" />
+      </figure>
+    </div>
+    <div class="column centerContent">
+      <div>
+        <a
+          [routerLink]="['/product', product.url]"
+          class="column has-text-weight-semibold"
+          >{{ product.title }}</a
+        >
+      </div>
+    </div>
+    <div class="column is-narrow centerContent">
+      <p>Quantity: {{ order.products[i].quantity }}</p>
+    </div>
+    <div class="column is-narrow centerContent">
+      <p>
+        ${{ (order.products[i].quantity * order.products[i].price).toFixed(2) }}
+      </p>
+    </div>
+  </div>
+  <div class="columns">
+    <div class="column has-text-right">
+      Shipping: ${{ order.shippingPrice.toFixed(2) }}
+    </div>
+  </div>
+  <div class="columns">
+    <div class="column has-text-right">
+      VAT: ${{ getTaxes(order.products).toFixed(2) }}
+    </div>
+  </div>
+  <div class="columns">
+    <div class="column has-text-right">
+      <h4 class="title is-4">
+        Total: ${{ getTotal(order.products).toFixed(2) }}
+      </h4>
+    </div>
+  </div>
+</div>

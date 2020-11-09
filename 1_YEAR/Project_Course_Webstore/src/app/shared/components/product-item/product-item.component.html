@@ -1,0 +1,80 @@
+<div class="box product-item" *ngIf="product">
+  <figure class="image zoom" style="margin-bottom: 1.25rem">
+    <a [routerLink]="['/product', product.url]">
+      <img [src]="product.coverImage.imageUrl" />
+    </a>
+  </figure>
+  <a
+    [routerLink]="['/product', product.url]"
+    class="has-text-weight-semibold"
+    >{{ product.title }}</a
+  >
+  <div style="margin-top: 0.75rem">
+    <div class="columns">
+      <div class="column pricing">
+        <stars [rating]="product.avgRating" [isLarge]="false"></stars>
+        <span class="has-text-grey-light" style="padding-left: 0.5rem"
+          >({{ product.numRatings }})</span
+        >
+      </div>
+    </div>
+    <div class="columns pricing">
+      <div class="column" *ngIf="isModeCustomerView">
+        <span
+          class="tag bold-500 is-medium is-light is-white"
+          *ngIf="!product.isDayDeal"
+          >${{ product.price.toFixed(2) }}</span
+        >
+        <div class="tags has-addons" *ngIf="product.isDayDeal">
+          <span class="tag bold-500 is-medium is-light"
+            >${{ product.discountPrice.toFixed(2) }}</span
+          >
+          <span
+            class="tag is-medium is-danger has-text-white has-text-weight-semibold"
+            >-
+            {{
+              getDiscountPercentage(product.discountPrice, product.price)
+            }}%</span
+          >
+        </div>
+      </div>
+      <div class="column pricing" *ngIf="isModeProductManagement">
+        <div class="buttons">
+          <button class="button" (click)="updateProduct(product)">
+            <span class="icon">
+              <i class="fas fa-pen"></i>
+            </span>
+          </button>
+          <button
+            class="button"
+            (click)="changeDealStatus(product)"
+            [ngClass]="{ 'is-warning': product.isDayDeal }"
+          >
+            <span class="icon">
+              <i class="fas fa-percent"></i>
+            </span>
+          </button>
+        </div>
+      </div>
+      <div class="column is-narrow pricing" *ngIf="isModeProductManagement">
+        <span
+          class="tag bold-500 is-medium is-medium is-light"
+          *ngIf="!product.isDayDeal"
+          >${{ product.price.toFixed(2) }}</span
+        >
+        <div class="tags has-addons" *ngIf="product.isDayDeal">
+          <span class="tag bold-500 is-medium is-light"
+            >${{ product.discountPrice.toFixed(2) }}</span
+          >
+          <span
+            class="tag is-medium is-danger has-text-white has-text-weight-semibold"
+            >-
+            {{
+              getDiscountPercentage(product.discountPrice, product.price)
+            }}%</span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

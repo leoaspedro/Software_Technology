@@ -1,0 +1,109 @@
+<modal>
+  <add-category></add-category>
+</modal>
+
+<div class="box">
+  <div class="columns">
+    <div class="column">
+      <p class="title is-3">Category Management</p>
+    </div>
+    <div class="column is-narrow">
+      <a class="button is-link" (click)="toggleModal()">
+        <span class="icon">
+          <i class="fas fa-plus"></i>
+        </span>
+        <span>Add category</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <section class="hero">
+    <div class="hero-body">
+      <h1 class="title">
+        Bikes
+      </h1>
+      <h2 class="subtitle">
+        Manage your bikes.
+      </h2>
+    </div>
+  </section>
+  <div *ngIf="bikes$ | async; let bikes; else: loading">
+    <product-management-category-items
+      [items]="bikes"
+    ></product-management-category-items>
+    <div *ngIf="bikes.length === 0">
+      <empty-state
+        [hasBox]="true"
+        [icon]="'fa-info-circle'"
+        [message]="'You have no bike categories yet.'"
+      ></empty-state>
+    </div>
+  </div>
+  <ng-template #loading>
+    <section class="section has-text-centered">
+      <a class="button is-large is-rounded is-loading"></a>
+    </section>
+  </ng-template>
+</section>
+
+<section class="section">
+  <section class="hero">
+    <div class="hero-body" style="border-top: 2px solid #eee">
+      <h1 class="title">
+        Accessories
+      </h1>
+      <h2 class="subtitle">
+        Manage your accessories.
+      </h2>
+    </div>
+  </section>
+  <div *ngIf="accessories$ | async; let accessories; else: loading">
+    <product-management-category-items
+      [items]="accessories"
+    ></product-management-category-items>
+    <div *ngIf="accessories.length === 0">
+      <empty-state
+        [hasBox]="true"
+        [icon]="'fa-info-circle'"
+        [message]="'You have no accessory categories yet.'"
+      ></empty-state>
+    </div>
+  </div>
+  <ng-template #loading>
+    <section class="section has-text-centered">
+      <a class="button is-large is-rounded is-loading"></a>
+    </section>
+  </ng-template>
+</section>
+
+<section class="section">
+  <section class="hero">
+    <div class="hero-body" style="border-top: 2px solid #eee">
+      <h1 class="title">
+        Parts
+      </h1>
+      <h2 class="subtitle">
+        Manage your parts.
+      </h2>
+    </div>
+  </section>
+  <div *ngIf="parts$ | async; let parts; else: loading">
+    <product-management-category-items
+      [items]="parts"
+    ></product-management-category-items>
+    <div *ngIf="parts.length === 0">
+      <empty-state
+        [hasBox]="true"
+        [icon]="'fa-info-circle'"
+        [message]="'You have no part categories yet.'"
+      ></empty-state>
+    </div>
+  </div>
+  <ng-template #loading>
+    <section class="section has-text-centered">
+      <a class="button is-large is-rounded is-loading"></a>
+    </section>
+  </ng-template>
+</section>

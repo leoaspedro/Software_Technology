@@ -1,0 +1,189 @@
+<div class="container" style="padding: 3rem 0">
+  <ul
+    class="steps is-narrow is-medium is-centered has-content-centered"
+    style="padding-bottom: 2rem"
+  >
+    <li
+      class="steps-segment"
+      [ngClass]="{
+        'is-active': currentStep === 0,
+        'has-gaps': currentStep <= 0
+      }"
+    >
+      <a class="has-text-dark">
+        <span class="steps-marker">
+          <span class="icon">
+            <i class="fa fa-shopping-cart"></i>
+          </span>
+        </span>
+        <div class="steps-content">
+          <p class="heading">Shopping Cart</p>
+        </div>
+      </a>
+    </li>
+    <li
+      class="steps-segment"
+      [ngClass]="{
+        'is-active': currentStep === 1,
+        'has-gaps': currentStep <= 1
+      }"
+    >
+      <a class="has-text-dark">
+        <span class="steps-marker">
+          <span class="icon">
+            <i class="fa fa-user"></i>
+          </span>
+        </span>
+        <div class="steps-content">
+          <p class="heading">Customer Data</p>
+        </div>
+      </a>
+    </li>
+    <li
+      class="steps-segment"
+      [ngClass]="{
+        'is-active': currentStep === 2,
+        'has-gaps': currentStep <= 2
+      }"
+    >
+      <a class="has-text-dark">
+        <span class="steps-marker">
+          <span class="icon">
+            <i class="fas fa-shipping-fast"></i>
+          </span>
+        </span>
+        <div class="steps-content">
+          <p class="heading">Shipping</p>
+        </div>
+      </a>
+    </li>
+    <li
+      class="steps-segment"
+      [ngClass]="{
+        'is-active': currentStep === 3,
+        'has-gaps': currentStep <= 3
+      }"
+    >
+      <a class="has-text-dark">
+        <span class="steps-marker">
+          <span class="icon">
+            <i class="fas fa-dollar-sign"></i>
+          </span>
+        </span>
+        <div class="steps-content">
+          <p class="heading">Payment</p>
+        </div>
+      </a>
+    </li>
+    <li class="steps-segment" [ngClass]="{ 'is-active': currentStep === 4 }">
+      <a class="has-text-dark">
+        <span class="steps-marker">
+          <span class="icon">
+            <i class="fa fa-check"></i>
+          </span>
+        </span>
+        <div class="steps-content">
+          <p class="heading">Confirmation</p>
+        </div>
+      </a>
+    </li>
+  </ul>
+  <div class="columns">
+    <div class="column is-two-thirds">
+      <div class="box">
+        <app-checkout-shopping-cart
+          *ngIf="currentStep === 0"
+        ></app-checkout-shopping-cart>
+        <app-checkout-customer-data
+          *ngIf="currentStep === 1"
+        ></app-checkout-customer-data>
+        <app-checkout-shipping
+          *ngIf="currentStep === 2"
+        ></app-checkout-shipping>
+        <app-checkout-payment *ngIf="currentStep === 3"></app-checkout-payment>
+        <app-checkout-overview
+          *ngIf="currentStep === 4"
+        ></app-checkout-overview>
+      </div>
+    </div>
+    <div class="column is-one-third">
+      <div class="box">
+        <div *ngIf="currentStep === 4">
+          <div class="columns">
+            <div class="column is-narrow">
+              <span class="icon is-large">
+                <i class="far fa-3x fa-check-circle"></i>
+              </span>
+            </div>
+            <div class="column">
+              <p class="title is-5">Order No. {{ orderNumber }}</p>
+              <p class="subtitle is-6">Thank you, {{ userDetails?.name }}!</p>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column">
+              <a routerLink="/my-orders" class="button is-link is-fullwidth"
+                >View my orders</a
+              >
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column">
+              <a routerLink="/" class="button is-fullwidth"
+                >Return to startpage</a
+              >
+            </div>
+          </div>
+        </div>
+        <div *ngIf="currentStep < 4">
+          <h4 class="title is-4">Summary ({{ productsQuantity }})</h4>
+          <div class="columns">
+            <div class="column is-half has-text-weight-semibold">Subtotal</div>
+            <div class="column is-half">${{ subtotal.toFixed(2) }}</div>
+          </div>
+          <div class="columns">
+            <div class="column is-half has-text-weight-semibold">Shipping</div>
+            <div class="column is-half">${{ shippingCosts.toFixed(2) }}</div>
+          </div>
+          <div class="columns" style="border-bottom: 1px solid #ddd">
+            <div class="column is-half has-text-weight-semibold">
+              VAT (7%)
+            </div>
+            <div class="column is-half">${{ taxes.toFixed(2) }}</div>
+          </div>
+          <div class="columns">
+            <div class="column is-half has-text-weight-semibold">Total</div>
+            <div class="column is-half">${{ total.toFixed(2) }}</div>
+          </div>
+          <div class="columns" *ngIf="currentStep === 0">
+            <div class="column">
+              <button routerLink="/" class="button is-fullwidth">
+                Continue shopping
+              </button>
+            </div>
+          </div>
+          <button
+            class="button is-link is-fullwidth"
+            [disabled]="products.length < 1"
+            *ngIf="currentStep === 0"
+            (click)="nextStep()"
+          >
+            Checkout
+          </button>
+          <button
+            class="button is-success is-fullwidth"
+            [ngClass]="{ 'is-loading': isLoading }"
+            [disabled]="!isPaymentValid"
+            *ngIf="currentStep === 3"
+            (click)="placeOrder()"
+          >
+            <span class="icon is-medium">
+              <i class="fas fa-check"></i>
+            </span>
+            <span>Complete order</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

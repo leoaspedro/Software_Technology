@@ -1,0 +1,132 @@
+<div class="modal-card">
+  <header class="modal-card-head">
+    <p class="modal-card-title">Add category</p>
+    <button class="delete" aria-label="close" (click)="closeModal()"></button>
+  </header>
+
+  <section class="modal-card-body">
+    <form [formGroup]="addCategoryForm">
+      <div *ngIf="!this.isSuccess && !this.isFail">
+        <div class="columns">
+          <div class="column">
+            <figure
+              class="image image is-3by1"
+              *ngIf="previewImage | async as image; else fileUpload"
+            >
+              <img [src]="image" width="600px" height="200px" />
+            </figure>
+            <ng-template #fileUpload>
+              <div class="file has-name is-boxed" *ngIf="!this.isUploading">
+                <label class="file-label">
+                  <input
+                    class="file-input"
+                    type="file"
+                    (change)="uploadFile($event)"
+                    formControlName="fileUpload"
+                  />
+                  <span class="file-cta">
+                    <span class="file-icon is-large">
+                      <i class="far fa-lg fa-image"></i>
+                    </span>
+                    <span class="file-label">
+                      Select a cover image
+                    </span>
+                  </span>
+                </label>
+              </div>
+              <div class="upload-spinner" *ngIf="this.isUploading">
+                <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+              </div>
+            </ng-template>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column">
+            <div class="field">
+              <label class="label">Topic</label>
+              <div class="select is-fullwidth">
+                <select #categoryTopic formControlName="topic">
+                  <option value="">Select topic</option>
+                  <option value="Bike">Bike</option>
+                  <option value="Accessory">Accessory</option>
+                  <option value="Part">Part</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column">
+            <div class="field">
+              <label class="label">Category name</label>
+              <div class="control">
+                <input
+                  #categoryName
+                  formControlName="name"
+                  class="input"
+                  type="text"
+                  placeholder="Category name"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column">
+            <label class="label">Category URL</label>
+            <div class="field has-addons">
+              <div class="control">
+                <a class="button" (click)="generateUrl()">
+                  Generate URL
+                </a>
+              </div>
+              <div class="control">
+                <input
+                  #categoryUrl
+                  formControlName="url"
+                  class="input"
+                  type="text"
+                  placeholder="Category URL"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <success-message
+      *ngIf="this.isSuccess"
+      [message]="'Successfully created category!'"
+    ></success-message>
+    <fail-message
+      *ngIf="this.isFail"
+      [message]="'Could not create category.'"
+    ></fail-message>
+  </section>
+
+  <footer class="modal-card-foot">
+    <button
+      class="button"
+      (click)="closeModal()"
+      *ngIf="this.isSuccess || this.isFail"
+    >
+      Close
+    </button>
+    <button
+      class="button"
+      (click)="closeModal()"
+      *ngIf="!this.isSuccess && !this.isFail"
+    >
+      Cancel
+    </button>
+    <button
+      (click)="onSubmit()"
+      class="button is-success"
+      [ngClass]="{ 'is-loading': this.isLoading }"
+      [disabled]="!addCategoryForm.valid"
+      *ngIf="!this.isSuccess && !this.isFail"
+    >
+      Add category
+    </button>
+  </footer>
+</div>

@@ -1,0 +1,26 @@
+<div class="box" *ngFor="let rating of ratings$ | async">
+  <div class="columns">
+    <div class="column is-narrow centerStars">
+      <stars [rating]="rating.rating"></stars>
+    </div>
+    <div class="column">
+      <p>
+        <span class="has-text-weight-semibold">{{ rating.customerName }}</span>
+        <span class="has-text-grey">
+          &ndash; {{ getDate(rating.date.seconds) }}</span
+        >
+      </p>
+      <p>
+        <q>{{ rating.comment }}</q>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="(ratings$ | async)?.length == 0">
+  <empty-state
+    [hasBox]="true"
+    [icon]="'fa-star'"
+    [message]="'This product has no ratings.'"
+  ></empty-state>
+</div>

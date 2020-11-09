@@ -1,0 +1,194 @@
+<section class="section" *ngIf="product$ | async as product">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <nav class="breadcrumb is-small" aria-label="breadcrumbs">
+          <ul>
+            <li><a routerLink="/">Bikeshop</a></li>
+            <li class="is-active">
+              <a aria-current="page">{{ product.title }}</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column is-two-third">
+        <div class="columns">
+          <div class="column">
+            <div class="box">
+              <product-detail-gallery
+                [images]="product.images"
+                [cover]="product.coverImage.imageUrl"
+              ></product-detail-gallery>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column is-one-third">
+        <h4 class="title is-4">{{ product.title }}</h4>
+        <div class="columns">
+          <div class="column is-narrow">
+            <stars [rating]="product.avgRating"></stars>
+          </div>
+          <div class="column has-text-grey">
+            <span *ngIf="product.numRatings === 1"
+              >{{ product.numRatings }} Customer rating</span
+            >
+            <span *ngIf="product.numRatings > 1 || product.numRatings === 0"
+              >{{ product.numRatings }} Customer ratings</span
+            >
+          </div>
+        </div>
+        <div class="box">
+          <div class="columns">
+            <div class="column" *ngIf="!product.isDayDeal">
+              <span class="tag bold-500 is-large is-light"
+                >${{ product.price.toFixed(2) }}</span
+              >
+            </div>
+            <div class="column" *ngIf="product.isDayDeal">
+              <div class="tags is-large has-addons">
+                <span class="tag bold-500 is-large is-light"
+                  >${{ product.discountPrice.toFixed(2) }}</span
+                >
+                <span
+                  class="tag is-large is-danger has-text-white has-text-weight-semibold"
+                  >-{{
+                    getDiscountPercentage(product.discountPrice, product.price)
+                  }}%</span
+                >
+              </div>
+              <span class="has-text-grey" style="font-size: 12px"
+                >incl. VAT, excl. shipping costs</span
+              >
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column">
+              <div class="tags is-medium has-addons">
+                <span class="tag is-dark has-text-white is-medium">Stock</span>
+                <span
+                  class="tag is-medium is-white has-text-weight-semibold"
+                  *ngIf="product.quantity >= 4"
+                  >{{ product.quantity }}</span
+                >
+                <span
+                  class="tag is-medium is-white has-text-weight-semibold"
+                  *ngIf="product.quantity > 0 && product.quantity < 4"
+                  >Only {{ product.quantity }} left</span
+                >
+                <span
+                  class="tag is-medium is-white has-text-weight-semibold"
+                  *ngIf="product.quantity === 0"
+                  >Out of stock</span
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="columns"
+            *ngIf="
+              product.quantity !== 0 && !getProductFromShoppingCart(product.id)
+            "
+          >
+            <div class="column is-narrow">
+              <div class="control">
+                <div
+                  class="select"
+                  width="20px"
+                  (change)="changeQuantity($event.target.value)"
+                >
+                  <select>
+                    <option
+                      *ngFor="
+                        let quantity of product.quantity | demoNumber;
+                        let i = index
+                      "
+                      >{{ i + 1 }}</option
+                    >
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <button
+                type="button"
+                class="button is-link is-fullwidth"
+                (click)="addToCart(product.id)"
+              >
+                Add to shopping cart
+              </button>
+            </div>
+          </div>
+          <div *ngIf="getProductFromShoppingCart(product.id)">
+            <div class="columns">
+              <div class="column">
+                <p class="has-text-weight-semibold">
+                  This product is placed in your shopping cart.
+                </p>
+              </div>
+            </div>
+            <div class="columns">
+              <div class="column">
+                <a class="button is-link is-fullwidth" routerLink="/checkout"
+                  >Go to shopping cart</a
+                >
+              </div>
+              <div class="column is-narrow">
+                <a class="button" (click)="undoByProductId(product.id)">
+                  <span class="icon">
+                    <i class="fas fa-undo"></i>
+                  </span>
+                  <span>Undo</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="columns">
+      <div class="column">
+        <h4 class="title is-4">
+          Product Description
+        </h4>
+        <p>{{ product.description }}</p>
+      </div>
+    </div>
+    <div *ngIf="product.file">
+      <div class="columns" *ngIf="product.file.fileName !== ''">
+        <div class="column is-narrow">
+          <a [href]="product.file.fileUrl" target="_blank">
+            <div class="box has-text-centered">
+              <span class="icon is-large">
+                <i class="far fa-3x fa-file-pdf"></i>
+              </span>
+              <p class="has-text-weight-semibold">
+                {{ product.file.fileName }}
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="columns">
+      <div class="column">
+        <p class="title is-4">{{ product.numRatings }} Customer ratings</p>
+        <div class="columns">
+          <div class="column is-narrow">
+            <stars [isLarge]="true" [rating]="product.avgRating"></stars>
+          </div>
+          <div class="column has-text-grey">
+            {{ product.avgRating.toFixed(1) }} of 5 stars
+          </div>
+        </div>
+        <product-detail-rating-items
+          [id]="product.id"
+        ></product-detail-rating-items>
+      </div>
+    </div>
+  </div>
+</section>

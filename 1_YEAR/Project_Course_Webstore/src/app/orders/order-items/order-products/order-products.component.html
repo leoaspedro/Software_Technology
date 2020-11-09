@@ -1,0 +1,126 @@
+<div *ngIf="products$ | async as products">
+  <div class="columns" *ngFor="let product of products; let i = index">
+    <!--For inital component load, determines if a review should be loaded to the fields-->
+    <div
+      *ngIf="
+        product.comment === undefined ? setNewRating(true) : setNewRating(false)
+      "
+    ></div>
+    <!--Image-->
+    <div class="column is-narrow">
+      <figure class="image is-128x128">
+        <img [src]="product.coverImage.imageUrl" />
+      </figure>
+    </div>
+    <div class="column centerContent">
+      <!--Title-->
+      <div class="columns">
+        <a
+          [routerLink]="['/product', product.url]"
+          class="column has-text-weight-semibold"
+          >{{ product.title }}</a
+        >
+      </div>
+      <!--Review eligibility-->
+      <div
+        class="columns"
+        *ngIf="order.status === 'New' || order.status === 'Delayed'"
+      >
+        <div class="column has-text-grey">
+          <i class="fas fa-info-circle"></i> You can rate this product as soon
+          as it's shipped.
+        </div>
+      </div>
+      <!--Review-->
+      <div
+        class="columns"
+        *ngIf="order.status !== 'New' && order.status !== 'Delayed'"
+      >
+        <!--Stars-->
+        <div class="column is-narrow">
+          <fieldset class="rating" (change)="checkValidity(i)">
+            <input
+              type="radio"
+              id="{{ 'product' + i + 'star5' }}"
+              name="{{ 'rating' + i }}"
+              value="5"
+            /><label
+              for="{{ 'product' + i + 'star5' }}"
+              title="Awesome - 5 stars"
+            ></label>
+            <input
+              type="radio"
+              id="{{ 'product' + i + 'star4' }}"
+              name="{{ 'rating' + i }}"
+              value="4"
+            /><label
+              for="{{ 'product' + i + 'star4' }}"
+              title="Pretty good - 4 stars"
+            ></label>
+            <input
+              type="radio"
+              id="{{ 'product' + i + 'star3' }}"
+              name="{{ 'rating' + i }}"
+              value="3"
+            /><label
+              for="{{ 'product' + i + 'star3' }}"
+              title="Alright - 3 stars"
+            ></label>
+            <input
+              type="radio"
+              id="{{ 'product' + i + 'star2' }}"
+              name="{{ 'rating' + i }}"
+              value="2"
+            /><label
+              for="{{ 'product' + i + 'star2' }}"
+              title="Meh - 2 stars"
+            ></label>
+            <input
+              type="radio"
+              id="{{ 'product' + i + 'star1' }}"
+              name="{{ 'rating' + i }}"
+              value="1"
+            /><label
+              for="{{ 'product' + i + 'star1' }}"
+              title="Sucks big time - 1 star"
+            ></label>
+          </fieldset>
+        </div>
+        <!--Review text input-->
+        <div class="column">
+          <input
+            *ngIf="newRating"
+            class="input"
+            type="text"
+            id="{{ 'comment' + i }}"
+            placeholder="Your opinion about the product"
+            (input)="checkValidity(i)"
+          />
+          <input
+            *ngIf="!newRating"
+            class="input"
+            type="text"
+            id="{{ 'comment' + i }}"
+            placeholder="Your opinion about the product"
+            (input)="checkValidity(i)"
+            [value]="product.comment"
+          />
+        </div>
+        <!--Submit/update button-->
+        <div class="column is-narrow">
+          <button
+            class="button is-success"
+            id="{{ 'submitButton' + i }}"
+            (click)="sendRating(product, i, product.ratingId)"
+            disabled
+          >
+            <p *ngIf="newRating">Submit Review</p>
+            <p *ngIf="!newRating">Update Review</p>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!--Fills in the stars last if a previous review was made-->
+    <div *ngIf="!newRating; then setStars(product.rating, i)"></div>
+  </div>
+</div>

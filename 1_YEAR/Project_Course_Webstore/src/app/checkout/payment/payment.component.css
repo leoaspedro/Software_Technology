@@ -1,0 +1,11 @@
+.is-4 {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.devider {
+  height: 1px;
+  width: 100%;
+  background: #ddd;
+  margin: 1rem 0;
+}

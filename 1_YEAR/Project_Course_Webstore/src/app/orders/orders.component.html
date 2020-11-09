@@ -1,0 +1,30 @@
+<div class="container">
+  <section class="hero">
+    <div class="hero-body">
+      <h1 class="title">
+        My orders
+      </h1>
+      <h2 class="subtitle">
+        Overview of your order history.
+      </h2>
+    </div>
+  </section>
+  <div
+    *ngIf="orders$ | async; let orders; else: loading"
+    style="margin-bottom:1rem;"
+  >
+    <order-items [orders]="orders"></order-items>
+    <div *ngIf="orders.length === 0">
+      <empty-state
+        [hasBox]="true"
+        [icon]="'fa-list'"
+        [message]="'You have not placed any orders yet.'"
+      ></empty-state>
+    </div>
+  </div>
+  <ng-template #loading>
+    <section class="section has-text-centered">
+      <a class="button is-large is-rounded is-loading"></a>
+    </section>
+  </ng-template>
+</div>

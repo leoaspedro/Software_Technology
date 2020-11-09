@@ -1,0 +1,1014 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Final_WorkShop_2:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="43d80553-12fb-4019-b8a7-263ef419108b" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/View/Menu_View.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="143">
+              <caret line="26" column="60" selection-start-line="26" selection-start-column="60" selection-end-line="26" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Model/Data_Base.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1634">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1959#1960#0" expanded="true" />
+                <element signature="e#1993#1994#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>12</find>
+      <find>G</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/Model/Data_Base_Handler.java" />
+        <option value="$PROJECT_DIR$/src/Model/ObservableList.java" />
+        <option value="$PROJECT_DIR$/Data_Sheet" />
+        <option value="$PROJECT_DIR$/src/Model/Member.java" />
+        <option value="$PROJECT_DIR$/src/View/Main_View.java" />
+        <option value="$PROJECT_DIR$/src/View/Print_View.java" />
+        <option value="$PROJECT_DIR$/src/Model/Boat.java" />
+        <option value="$PROJECT_DIR$/src/View/copy.java" />
+        <option value="$PROJECT_DIR$/src/View/MOOckingView.java" />
+        <option value="$PROJECT_DIR$/src/Main_Start.java" />
+        <option value="$PROJECT_DIR$/src/View/Menu_View.java" />
+        <option value="$PROJECT_DIR$/src/Model/Data_Base.java" />
+        <option value="$PROJECT_DIR$/src/Model/BoatLength.java" />
+        <option value="$PROJECT_DIR$/src/View/View_Interface.java" />
+        <option value="$PROJECT_DIR$/src/View/Portuguese_View.java" />
+        <option value="$PROJECT_DIR$/Data_Sheet.txt" />
+        <option value="$PROJECT_DIR$/src/Controller/Controller_Class.java" />
+        <option value="$PROJECT_DIR$/src/View/English_View.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="950" />
+    <option name="width" value="980" />
+    <option name="height" value="1040" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Final_WorkShop_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Final_WorkShop_2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Final_WorkShop_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Final_WorkShop_2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Final_WorkShop_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Final_WorkShop_2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Final_WorkShop_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Final_WorkShop_2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Final_WorkShop_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Final_WorkShop_2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="View" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Final_WorkShop_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Model" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main_Start" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main_Start" />
+      <module name="Final_WorkShop_2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main_Start" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="43d80553-12fb-4019-b8a7-263ef419108b" name="Default Changelist" comment="" />
+      <created>1573926816239</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1573926816239</updated>
+      <workItem from="1573926818968" duration="43000" />
+      <workItem from="1574178219062" duration="12803000" />
+      <workItem from="1574196242122" duration="2155000" />
+      <workItem from="1574200767340" duration="61000" />
+      <workItem from="1574202412301" duration="106000" />
+      <workItem from="1574239207058" duration="2101000" />
+      <workItem from="1574262604901" duration="13051000" />
+      <workItem from="1574345924571" duration="2792000" />
+      <workItem from="1574365466791" duration="4964000" />
+      <workItem from="1574378526727" duration="4828000" />
+      <workItem from="1574383804369" duration="1008000" />
+      <workItem from="1574387307570" duration="4765000" />
+      <workItem from="1574417793579" duration="9186000" />
+      <workItem from="1574441830143" duration="260000" />
+      <workItem from="1574442199824" duration="5000" />
+      <workItem from="1574442286263" duration="185000" />
+      <workItem from="1578486468710" duration="13226000" />
+      <workItem from="1578526231039" duration="981000" />
+      <workItem from="1578528531170" duration="3432000" />
+      <workItem from="1578533423418" duration="144000" />
+      <workItem from="1578533625255" duration="43000" />
+      <workItem from="1579374397991" duration="5152000" />
+      <workItem from="1579650565749" duration="124000" />
+      <workItem from="1580206395668" duration="3075000" />
+      <workItem from="1580415806120" duration="4043000" />
+      <workItem from="1580587261235" duration="14263000" />
+      <workItem from="1580772625986" duration="475000" />
+      <workItem from="1580773129682" duration="39000" />
+      <workItem from="1580840086917" duration="6522000" />
+      <workItem from="1581180955271" duration="432000" />
+      <workItem from="1581345631759" duration="16063000" />
+      <workItem from="1581363116251" duration="669000" />
+      <workItem from="1581428337758" duration="657000" />
+      <workItem from="1581465505409" duration="267000" />
+      <workItem from="1581466244357" duration="8859000" />
+      <workItem from="1581561633374" duration="9263000" />
+      <workItem from="1581572827010" duration="5704000" />
+      <workItem from="1582301380300" duration="111000" />
+      <workItem from="1583274993455" duration="58000" />
+      <workItem from="1583319707094" duration="2715000" />
+      <workItem from="1583346334967" duration="878000" />
+      <workItem from="1584006048005" duration="75000" />
+      <workItem from="1601306203397" duration="880000" />
+      <workItem from="1601557838968" duration="566000" />
+      <workItem from="1601559227916" duration="1026000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="158055000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18389262" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.15439093" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.52691215" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32577905" />
+      <window_info anchor="bottom" id="Duplicates" order="13" weight="0.3295129" />
+      <window_info anchor="bottom" id="SonarLint" order="14" weight="0.9575071" />
+      <window_info anchor="bottom" id="Dependency Viewer" order="15" weight="0.3286119" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Maven" order="5" weight="0.32871014" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Database" order="8" weight="0.3295302" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16577181" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.15439093" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.15722379" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32577905" />
+      <window_info anchor="bottom" id="Duplicates" order="13" weight="0.3295129" />
+      <window_info anchor="bottom" id="SonarLint" order="14" weight="0.9575071" />
+      <window_info anchor="bottom" id="Dependency Viewer" order="15" weight="0.3286119" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Maven" order="5" weight="0.32871014" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Database" order="8" weight="0.3295302" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Controller/Controller.java" />
+    <entry file="file://$USER_HOME$/First_Attempt_WKS2/WorkS2/WorkShop2/src/sample/Boat.java" />
+    <entry file="file://$PROJECT_DIR$/src/Model/ObservableList.java" />
+    <entry file="file://$PROJECT_DIR$/src/Model/Data_Base_Handler.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-12.0.2/lib/src.zip!/java.base/java/io/PrintStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="412" column="16" selection-start-line="412" selection-start-column="16" selection-end-line="412" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12.0.2/lib/src.zip!/java.base/java/nio/file/Files.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="372" column="30" selection-start-line="372" selection-start-column="30" selection-end-line="372" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Data_Sheet.txt" />
+    <entry file="file://$PROJECT_DIR$/Data_Sheet" />
+    <entry file="uml://JAVA/View.Print_View">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>View.Print_View</OriginalElement>
+          <nodes>
+            <node x="" y="">View.Print_View</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="59.0" y="14.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/Main_Start">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>Main_Start</OriginalElement>
+          <nodes>
+            <node x="" y="">Main_Start</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="59.0" y="14.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JavaScript-modules-diagram/C:/Users/LeonardoPedro/Desktop/Stuff/UNI/2 YEAR/OOAD/WorkShop2/FINAL_WK2/Final_WorkShop_2/.idea">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$/.idea</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="655.0" y="181.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>Details</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JavaScript-modules-diagram/C:/Users/LeonardoPedro/Desktop/Stuff/UNI/2 YEAR/OOAD/WorkShop2/FINAL_WK2/Final_WorkShop_2/src">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$/src</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="650.0" y="313.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>Details</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/copy.java" />
+    <entry file="file://$PROJECT_DIR$/src/View/MOOckingView.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-12.0.2/lib/src.zip!/java.base/java/util/Scanner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="1650" column="18" selection-start-line="1650" selection-start-column="18" selection-end-line="1650" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_WorkShop_2.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12.0.2/lib/src.zip!/java.base/java/lang/Enum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="263" selection-start-line="263" selection-end-line="263" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12.0.2/lib/src.zip!/java.base/jdk/internal/util/Preconditions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12.0.2/lib/src.zip!/java.base/java/util/Objects.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="371" column="29" selection-start-line="371" selection-start-column="29" selection-end-line="371" selection-end-column="29" />
+          <folding>
+            <element signature="e#14874#14875#0" expanded="true" />
+            <element signature="e#14942#14943#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12.0.2/lib/src.zip!/java.base/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="457" column="16" selection-start-line="457" selection-start-column="16" selection-end-line="457" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://MODULES/mdl-Final_WorkShop_2">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>MODULES</ID>
+          <OriginalElement>mdl-Final_WorkShop_2</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-299.0" y="-2.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JavaScript-modules-diagram/C:/Users/LeonardoPedro/Desktop/Stuff/UNI/2 YEAR/OOAD/WorkShop2/FINAL_WK2_2.0/Final_WorkShop_2/src">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$/src</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="624.0" y="252.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>Details</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data_Sheet.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/Portuguese_View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="358" selection-start-line="358" selection-end-line="358" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/View_Interface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main_Start.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/English_View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="902">
+          <caret line="314" column="105" selection-start-line="314" selection-start-column="105" selection-end-line="314" selection-end-column="105" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/BoatLength.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Boat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Member.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="52" column="55" selection-start-line="52" selection-start-column="50" selection-end-line="52" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/Menu_View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="26" column="60" selection-start-line="26" selection-start-column="60" selection-end-line="26" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="585.1147613960115" y="615.0">View.Portuguese_View</node>
+            <node x="394.7482582232584" y="224.0">Model.Boat</node>
+            <node x="748.1959595959595" y="448.0">View.Menu_View</node>
+            <node x="393.9472222222222" y="87.0">Model.Boat.BoatType</node>
+            <node x="431.42092883967865" y="712.0">Main_Start</node>
+            <node x="523.4482582232583" y="0.0">Model.BoatLength.ValueType</node>
+            <node x="483.6136315073816" y="448.0">Model.Data_Base</node>
+            <node x="179.24999999999997" y="331.0">View.Menu_View.ViewMethods</node>
+            <node x="403.6072034447034" y="331.0">Model.Member</node>
+            <node x="289.1709288396787" y="615.0">Controller.Controller_Class</node>
+            <node x="0.0" y="615.0">View.English_View</node>
+            <node x="111.0" y="448.0">View.View_Interface</node>
+            <node x="786.9469955969957" y="331.0">View.Menu_View.Language</node>
+            <node x="516.9472222222222" y="87.0">Model.BoatLength</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="Controller.Controller_Class" target="Model.Data_Base">
+              <point x="40.25" y="-13.5" />
+              <point x="409.9209288396787" y="545.0" />
+              <point x="497.3636315073816" y="545.0" />
+              <point x="-41.25" y="13.5" />
+            </edge>
+            <edge source="View.English_View" target="View.View_Interface">
+              <point x="48.0" y="-13.5" />
+              <point x="114.0" y="575.0" />
+              <point x="129.25" y="575.0" />
+              <point x="-54.75" y="13.5" />
+            </edge>
+            <edge source="Main_Start" target="View.Menu_View.Language">
+              <point x="53.10000000000008" y="-13.5" />
+              <point x="543.5209288396787" y="692.0" />
+              <point x="868.6959595959595" y="692.0" />
+              <point x="868.6959595959595" y="428.0" />
+              <point x="864.1969955969957" y="428.0" />
+              <point x="25.75" y="13.5" />
+            </edge>
+            <edge source="Controller.Controller_Class" target="Model.Boat">
+              <point x="-13.416666666666629" y="-13.5" />
+              <point x="356.2542621730121" y="575.0" />
+              <point x="376.7482582232584" y="575.0" />
+              <point x="376.7482582232584" y="311.0" />
+              <point x="420.6482582232584" y="311.0" />
+              <point x="-11.100000000000023" y="13.5" />
+            </edge>
+            <edge source="Main_Start" target="View.Menu_View">
+              <point x="29.500000000000057" y="-13.5" />
+              <point x="519.9209288396787" y="672.0" />
+              <point x="819.4469955969957" y="672.0" />
+              <point x="819.4469955969957" y="595.0" />
+              <point x="816.9459595959595" y="595.0" />
+              <point x="13.75" y="13.5" />
+            </edge>
+            <edge source="Main_Start" target="View.Portuguese_View">
+              <point x="17.700000000000045" y="-13.5" />
+              <point x="508.1209288396787" y="662.0" />
+              <point x="661.6147613960115" y="662.0" />
+              <point x="0.0" y="13.5" />
+            </edge>
+            <edge source="Controller.Controller_Class" target="View.View_Interface">
+              <point x="-67.08333333333331" y="-13.5" />
+              <point x="302.5875955063454" y="575.0" />
+              <point x="202.25" y="575.0" />
+              <point x="18.25" y="13.5" />
+            </edge>
+            <edge source="View.English_View" target="Model.Member">
+              <point x="36.0" y="-13.5" />
+              <point x="102.0" y="595.0" />
+              <point x="100.5" y="595.0" />
+              <point x="100.5" y="418.0" />
+              <point x="418.4405367780367" y="418.0" />
+              <point x="-29.666666666666686" y="13.5" />
+            </edge>
+            <edge source="Model.Boat" target="Model.BoatLength.ValueType">
+              <point x="-29.600000000000023" y="-13.5" />
+              <point x="402.1482582232584" y="154.0" />
+              <point x="383.4472222222222" y="154.0" />
+              <point x="383.4472222222222" y="57.0" />
+              <point x="550.9482582232583" y="57.0" />
+              <point x="-27.5" y="13.5" />
+            </edge>
+            <edge source="View.Menu_View" target="View.Menu_View.Language">
+              <point x="0.0" y="-13.5" />
+              <point x="803.1959595959595" y="428.0" />
+              <point x="812.6969955969957" y="428.0" />
+              <point x="-25.75" y="13.5" />
+            </edge>
+            <edge source="Model.Boat" target="Model.BoatLength">
+              <point x="29.600000000000023" y="-13.5" />
+              <point x="461.3482582232584" y="204.0" />
+              <point x="568.5722222222222" y="204.0" />
+              <point x="-7.375" y="13.5" />
+            </edge>
+            <edge source="Model.Member" target="Model.Boat">
+              <point x="22.25" y="-13.5" />
+              <point x="470.3572034447034" y="311.0" />
+              <point x="435.44825822325834" y="311.0" />
+              <point x="3.6999999999999886" y="13.5" />
+            </edge>
+            <edge source="View.Portuguese_View" target="Model.Boat.BoatType">
+              <point x="13.909090909090878" y="-13.5" />
+              <point x="675.5238523051024" y="545.0" />
+              <point x="704.6959595959595" y="545.0" />
+              <point x="704.6959595959595" y="154.0" />
+              <point x="486.6472222222222" y="154.0" />
+              <point x="41.19999999999999" y="13.5" />
+            </edge>
+            <edge source="Model.BoatLength" target="Model.BoatLength.ValueType">
+              <point x="29.5" y="-13.5" />
+              <point x="605.4472222222222" y="67.0" />
+              <point x="587.6149248899251" y="67.0" />
+              <point x="9.166666666666629" y="13.5" />
+            </edge>
+            <edge source="Main_Start" target="View.English_View">
+              <point x="-53.09999999999991" y="-13.5" />
+              <point x="437.32092883967874" y="692.0" />
+              <point x="66.0" y="692.0" />
+              <point x="0.0" y="13.5" />
+            </edge>
+            <edge source="View.English_View" target="Model.BoatLength.ValueType">
+              <point x="-60.0" y="-13.5" />
+              <point x="6.0" y="595.0" />
+              <point x="1.8084288396787542" y="595.0" />
+              <point x="1.8084288396787542" y="47.0" />
+              <point x="532.6149248899251" y="47.0" />
+              <point x="-45.833333333333314" y="13.5" />
+            </edge>
+            <edge source="View.Portuguese_View" target="Model.BoatLength.ValueType">
+              <point x="55.636363636363626" y="-13.5" />
+              <point x="717.2511250323752" y="575.0" />
+              <point x="737.6959595959595" y="575.0" />
+              <point x="737.6959595959595" y="47.0" />
+              <point x="624.2815915565918" y="47.0" />
+              <point x="45.83333333333337" y="13.5" />
+            </edge>
+            <edge source="View.English_View" target="View.Menu_View">
+              <point x="60.0" y="-13.5" />
+              <point x="126.0" y="585.0" />
+              <point x="761.9459595959595" y="585.0" />
+              <point x="-41.25" y="13.5" />
+            </edge>
+            <edge source="Main_Start" target="Controller.Controller_Class">
+              <point x="-17.699999999999932" y="-13.5" />
+              <point x="472.7209288396787" y="662.0" />
+              <point x="409.9209288396787" y="662.0" />
+              <point x="40.25" y="13.5" />
+            </edge>
+            <edge source="Main_Start" target="Model.Data_Base">
+              <point x="-5.89999999999992" y="-13.5" />
+              <point x="484.92092883967877" y="565.0" />
+              <point x="552.3636315073816" y="565.0" />
+              <point x="13.75" y="13.5" />
+            </edge>
+            <edge source="View.Portuguese_View" target="View.Menu_View">
+              <point x="69.5454545454545" y="-13.5" />
+              <point x="731.160215941466" y="595.0" />
+              <point x="789.4459595959595" y="595.0" />
+              <point x="-13.75" y="13.5" />
+            </edge>
+            <edge source="View.Portuguese_View" target="Model.Boat">
+              <point x="0.0" y="-13.5" />
+              <point x="661.6147613960115" y="535.0" />
+              <point x="693.6959595959595" y="535.0" />
+              <point x="693.6959595959595" y="271.0" />
+              <point x="465.04825822325836" y="271.0" />
+              <point x="33.30000000000001" y="13.5" />
+            </edge>
+            <edge source="Controller.Controller_Class" target="Model.Member">
+              <point x="13.416666666666686" y="-13.5" />
+              <point x="383.0875955063454" y="535.0" />
+              <point x="454.2247426184927" y="535.0" />
+              <point x="454.2247426184927" y="428.0" />
+              <point x="438.21831455581446" y="428.0" />
+              <point x="-9.888888888888914" y="13.5" />
+            </edge>
+            <edge source="Model.Data_Base" target="Model.Boat">
+              <point x="-12.222222222222229" y="-13.5" />
+              <point x="526.3914092851594" y="428.0" />
+              <point x="520.9607582232584" y="428.0" />
+              <point x="520.9607582232584" y="301.0" />
+              <point x="442.8482582232584" y="301.0" />
+              <point x="11.100000000000023" y="13.5" />
+            </edge>
+            <edge source="Controller.Controller_Class" target="View.Menu_View.ViewMethods">
+              <point x="-40.25" y="-13.5" />
+              <point x="329.4209288396787" y="565.0" />
+              <point x="267.5" y="565.0" />
+              <point x="267.5" y="398.0" />
+              <point x="257.375" y="398.0" />
+              <point x="15.625" y="13.5" />
+            </edge>
+            <edge source="View.Portuguese_View" target="Model.BoatLength">
+              <point x="27.818181818181756" y="-13.5" />
+              <point x="689.4329432141933" y="555.0" />
+              <point x="715.6959595959595" y="555.0" />
+              <point x="715.6959595959595" y="144.0" />
+              <point x="612.8222222222222" y="144.0" />
+              <point x="36.875" y="13.5" />
+            </edge>
+            <edge source="Model.Boat" target="Model.Boat.BoatType">
+              <point x="-14.800000000000011" y="-13.5" />
+              <point x="416.94825822325834" y="164.0" />
+              <point x="424.8472222222222" y="164.0" />
+              <point x="-20.600000000000023" y="13.5" />
+            </edge>
+            <edge source="View.View_Interface" target="Model.Boat">
+              <point x="-48.66666666666663" y="-13.5" />
+              <point x="135.33333333333337" y="378.0" />
+              <point x="146.97916666666663" y="378.0" />
+              <point x="146.97916666666663" y="301.0" />
+              <point x="413.2482582232584" y="301.0" />
+              <point x="-18.5" y="13.5" />
+            </edge>
+            <edge source="View.English_View" target="Model.Boat">
+              <point x="-12.0" y="-13.5" />
+              <point x="54.0" y="595.0" />
+              <point x="56.5" y="595.0" />
+              <point x="56.5" y="281.0" />
+              <point x="398.44825822325834" y="281.0" />
+              <point x="-33.30000000000001" y="13.5" />
+            </edge>
+            <edge source="Model.Data_Base" target="Model.BoatLength.ValueType">
+              <point x="48.888888888888914" y="-13.5" />
+              <point x="587.5025203962705" y="428.0" />
+              <point x="645.4472222222222" y="428.0" />
+              <point x="645.4472222222222" y="57.0" />
+              <point x="605.9482582232583" y="57.0" />
+              <point x="27.5" y="13.5" />
+            </edge>
+            <edge source="View.English_View" target="View.Menu_View.ViewMethods">
+              <point x="12.0" y="-13.5" />
+              <point x="78.5" y="388.0" />
+              <point x="194.87499999999997" y="388.0" />
+              <point x="-46.875" y="13.5" />
+            </edge>
+            <edge source="Model.Data_Base" target="Model.Member">
+              <point x="-36.666666666666686" y="-13.5" />
+              <point x="501.94696484071494" y="408.0" />
+              <point x="457.9960923335923" y="408.0" />
+              <point x="9.888888888888914" y="13.5" />
+            </edge>
+            <edge source="Model.Data_Base" target="Model.Boat.BoatType">
+              <point x="12.222222222222229" y="-13.5" />
+              <point x="550.8358537296039" y="418.0" />
+              <point x="542.9607582232584" y="418.0" />
+              <point x="542.9607582232584" y="164.0" />
+              <point x="466.0472222222222" y="164.0" />
+              <point x="20.600000000000023" y="13.5" />
+            </edge>
+            <edge source="View.View_Interface" target="View.Menu_View.ViewMethods">
+              <point x="0.0" y="-13.5" />
+              <point x="184.0" y="398.0" />
+              <point x="226.12499999999997" y="398.0" />
+              <point x="-15.625" y="13.5" />
+            </edge>
+            <edge source="View.View_Interface" target="Model.Member">
+              <point x="48.66666666666666" y="-13.5" />
+              <point x="232.66666666666666" y="428.0" />
+              <point x="428.3294256669256" y="428.0" />
+              <point x="-19.77777777777777" y="13.5" />
+            </edge>
+            <edge source="View.Portuguese_View" target="View.View_Interface">
+              <point x="-69.5454545454545" y="-13.5" />
+              <point x="592.069306850557" y="525.0" />
+              <point x="238.75" y="525.0" />
+              <point x="54.75" y="13.5" />
+            </edge>
+            <edge source="View.Portuguese_View" target="View.Menu_View.ViewMethods">
+              <point x="-55.636363636363626" y="-13.5" />
+              <point x="605.9783977596479" y="515.0" />
+              <point x="365.7482582232584" y="515.0" />
+              <point x="365.7482582232584" y="398.0" />
+              <point x="288.625" y="398.0" />
+              <point x="46.875" y="13.5" />
+            </edge>
+            <edge source="View.English_View" target="Model.Boat.BoatType">
+              <point x="-48.0" y="-13.5" />
+              <point x="18.0" y="595.0" />
+              <point x="23.20842883967879" y="595.0" />
+              <point x="23.20842883967879" y="164.0" />
+              <point x="404.2472222222222" y="164.0" />
+              <point x="-41.19999999999999" y="13.5" />
+            </edge>
+            <edge source="View.English_View" target="Model.BoatLength">
+              <point x="-24.0" y="-13.5" />
+              <point x="42.0" y="595.0" />
+              <point x="45.5" y="595.0" />
+              <point x="45.5" y="184.0" />
+              <point x="539.0722222222222" y="184.0" />
+              <point x="-36.875" y="13.5" />
+            </edge>
+            <edge source="View.Portuguese_View" target="Model.Member">
+              <point x="-41.72727272727275" y="-13.5" />
+              <point x="619.8874886687388" y="505.0" />
+              <point x="604.1136315073816" y="505.0" />
+              <point x="604.1136315073816" y="388.0" />
+              <point x="477.77387011137" y="388.0" />
+              <point x="29.66666666666663" y="13.5" />
+            </edge>
+            <edge source="Model.Data_Base" target="Model.BoatLength">
+              <point x="36.66666666666663" y="-13.5" />
+              <point x="575.2802981740483" y="418.0" />
+              <point x="616.2597222222222" y="418.0" />
+              <point x="616.2597222222222" y="194.0" />
+              <point x="598.0722222222222" y="194.0" />
+              <point x="22.125" y="13.5" />
+            </edge>
+            <edge source="Main_Start" target="View.View_Interface">
+              <point x="-41.2999999999999" y="-13.5" />
+              <point x="449.12092883967875" y="682.0" />
+              <point x="165.75" y="682.0" />
+              <point x="-18.25" y="13.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="-122.0" y="346.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/Controller_Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="591">
+          <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4319#4320#0" expanded="true" />
+            <element signature="e#4382#4383#0" expanded="true" />
+            <element signature="e#4434#4435#0" expanded="true" />
+            <element signature="e#4483#4484#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Data_Base.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1634">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1959#1960#0" expanded="true" />
+            <element signature="e#1993#1994#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>Final_WorkShop_2:jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>12</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>12</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

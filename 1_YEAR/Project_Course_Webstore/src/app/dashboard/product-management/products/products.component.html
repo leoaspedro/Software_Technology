@@ -1,0 +1,81 @@
+<div *ngIf="category$ | async; let category">
+  <modal>
+    <add-update-product
+      [type]="modalType"
+      [product]="itemSelected"
+      [category]="category"
+    ></add-update-product>
+  </modal>
+  <!-- <modal *ngIf="modalType === 'update'">
+    <update-product
+      *ngIf="itemSelected"
+      [product]="itemSelected"
+      [category]="category"
+    ></update-product>
+  </modal> -->
+</div>
+
+<div class="box">
+  <div class="columns">
+    <div class="column">
+      <p class="title is-3">Product Management</p>
+    </div>
+    <div class="column is-narrow">
+      <div class="buttons">
+        <a class="button" [routerLink]="['/dashboard', 'categories']">
+          <span>View all categories</span>
+        </a>
+        <a
+          class="button is-link"
+          *ngIf="products$ | async; else loadingSpinner"
+          (click)="toggleModal('add')"
+        >
+          <span class="icon">
+            <i class="fas fa-plus"></i>
+          </span>
+          <span> Add {{ (category$ | async)?.topic.toLowerCase() }}</span>
+        </a>
+        <ng-template #loadingSpinner>
+          <div class="button is-link is-loading">Loading</div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="section">
+  <div *ngIf="products$ | async; let products; else: loading">
+    <section class="hero">
+      <div class="hero-body">
+        <h1 class="title">
+          {{ (category$ | async)?.name }}
+        </h1>
+        <h2 class="subtitle">
+          Manage {{ (products$ | async)?.length }}
+          {{ (category$ | async)?.name }}.
+        </h2>
+      </div>
+    </section>
+    <div>
+      <div class="columns is-multiline">
+        <div class="column is-one-quarter" *ngFor="let product of products">
+          <product-item
+            [product]="product"
+            [isModeProductManagement]="true"
+          ></product-item>
+        </div>
+      </div>
+      <div *ngIf="products.length === 0">
+        <empty-state
+          [hasBox]="true"
+          [icon]="'fa-info-circle'"
+          [message]="'No product for this category found.'"
+        ></empty-state>
+      </div>
+    </div>
+  </div>
+  <ng-template #loading>
+    <section class="section has-text-centered">
+      <a class="button is-large is-rounded is-loading"></a>
+    </section>
+  </ng-template>
+</section>

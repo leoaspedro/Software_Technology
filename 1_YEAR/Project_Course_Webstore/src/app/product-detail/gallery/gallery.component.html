@@ -1,0 +1,28 @@
+<div class="columns">
+  <div class="column is-half centerImage" style="max-width: 500px">
+    <figure class="image">
+      <img [src]="currentImage" />
+    </figure>
+  </div>
+  <div class="column is-half">
+    <div class="columns is-multiline">
+      <div
+        class="column is-half"
+        *ngFor="let image of imageGallery; let i = index"
+      >
+        <figure
+          class="image centerImage"
+          style="border-radius: 6px;"
+          [ngStyle]="{
+            border:
+              i === currentImageIndex ? '1px solid #ddd' : '1px solid white'
+          }"
+        >
+          <a (click)="changeImage(image, i)">
+            <img [src]="image" />
+          </a>
+        </figure>
+      </div>
+    </div>
+  </div>
+</div>

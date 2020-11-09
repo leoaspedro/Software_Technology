@@ -1,0 +1,44 @@
+<h4 class="title is-4">Shipping</h4>
+
+<form [formGroup]="form">
+  <div class="control">
+    <div class="columns" *ngFor="let shipping of shippings; let i = index">
+      <div class="column">
+        <label class="radio">
+          <input
+            type="radio"
+            [value]="i"
+            [checked]="form.value.id === i"
+            formControlName="id"
+          />
+          <span class="has-text-weight-semibold"> {{ shipping.name }}</span> ({{
+            shipping.time
+          }})
+        </label>
+      </div>
+      <div class="column is-narrow">${{ shipping.price.toFixed(2) }}</div>
+    </div>
+  </div>
+</form>
+
+<div class="devider"></div>
+<div class="columns">
+  <div class="column">
+    <a class="button is-white" (click)="previousStep()">
+      <span class="icon">
+        <i class="fas fa-chevron-left"></i>
+      </span>
+      <span>Customer Data</span></a
+    >
+  </div>
+  <div class="column is-narrow">
+    <a class="button is-link" (click)="nextStep()">
+      <span>
+        Select payment
+      </span>
+      <span class="icon">
+        <i class="fas fa-chevron-right"></i>
+      </span>
+    </a>
+  </div>
+</div>

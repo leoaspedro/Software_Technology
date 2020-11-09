@@ -1,0 +1,12 @@
+
+„squid:S4165"hRemove this useless assignment; "Value_Type" already holds the assigned value along all execution paths.(¦¯²ãùÿÿÿÿ
+isquid:S00117""QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…ƒ‰’
+rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(á–Ì“
+isquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘•ò­
+Gsquid:S1172"+Remove this unused method parameter "type".(¤¨×ïıÿÿÿÿ
+rsquid:S00116"URename this field "Value_Type" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÕÀ†ÿÿÿÿÿ
+isquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘•ò­
+rsquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ù”ŞÁ
+wsquid:S00115
+"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(’©ıùÿÿÿÿ
+msquid:S00116"PRename this field "Value" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùä¥Èıÿÿÿÿ

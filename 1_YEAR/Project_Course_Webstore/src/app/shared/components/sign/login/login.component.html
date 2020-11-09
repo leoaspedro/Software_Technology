@@ -1,0 +1,101 @@
+<!--Login form-->
+<form [formGroup]="loginForm">
+  <!--Email field-->
+  <div class="field">
+    <label class="label">Email</label>
+    <div class="control has-icons-left">
+      <input
+        class="input"
+        [ngClass]="{
+          'is-danger':
+            (loginForm.get('email').errors && hasEmailError) ||
+            incorrectCredentials
+        }"
+        formControlName="email"
+        type="email"
+        placeholder="Enter your email address"
+        required
+        (focus)="showEmailError(false)"
+        (blur)="showEmailError(true)"
+      />
+      <span class="icon is-small is-left">
+        <i class="fas fa-envelope"></i>
+      </span>
+    </div>
+    <!--Error message container-->
+    <span
+      *ngIf="loginForm.get('email').errors && hasEmailError"
+      class="content is-small"
+      style="color:red"
+    >
+      <!--Error messages-->
+      <span id="blankEmailError" *ngIf="loginForm.get('email').errors.required">
+        Email is required
+      </span>
+      <span id="invalidEmailError" *ngIf="loginForm.get('email').errors.email">
+        Incorrect email format
+      </span>
+      <!--Add error message "incorrect email" here, but only show it after form submit  -->
+    </span>
+  </div>
+
+  <!--Password field-->
+  <div class="field">
+    <label class="label">Password</label>
+    <div class="control has-icons-left">
+      <input
+        class="input"
+        [ngClass]="{
+          'is-danger':
+            (loginForm.get('password').errors && hasPasswordError) ||
+            incorrectCredentials
+        }"
+        formControlName="password"
+        type="password"
+        placeholder="Enter your password"
+        required
+        (focus)="showPasswordError(false)"
+        (blur)="showPasswordError(true)"
+      />
+      <span class="icon is-small is-left">
+        <i class="fas fa-lock"></i>
+      </span>
+    </div>
+    <!--Error message for password field-->
+    <span
+      *ngIf="loginForm.get('password').errors && hasPasswordError"
+      class="content is-small"
+      style="color:red;margin-bottom: 0px;"
+    >
+      Password is required
+    </span>
+  </div>
+
+  <!--Incorrect credentials error message-->
+  <span
+    *ngIf="incorrectCredentials"
+    class="content is-small"
+    style="color:red;margin-bottom: 0px;"
+  >
+    Incorrect email or password!
+  </span>
+
+  <!--Forgot password link and Submit button-->
+  <div class="field is-grouped">
+    <p class="control is-expanded">
+      <a class="content is-small " (click)="forgetPasswordClick()"
+        >Forgot your password?</a
+      >
+    </p>
+    <p class="control">
+      <button
+        class="button is-success"
+        (click)="onSubmit()"
+        [ngClass]="{ 'is-loading': isLoading }"
+        [disabled]="!loginForm.valid"
+      >
+        Login
+      </button>
+    </p>
+  </div>
+</form>

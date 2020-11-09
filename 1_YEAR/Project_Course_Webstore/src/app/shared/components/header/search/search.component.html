@@ -1,0 +1,113 @@
+<div class="modal" [ngClass]="{ 'is-active': isActive }">
+  <div class="modal-background" (click)="toggleModal()"></div>
+  <div class="modal-content">
+    <div class="box">
+      <div class="field">
+        <p class="control has-icons-left">
+          <input
+            class="input is-large"
+            type="text"
+            [(ngModel)]="searchterm"
+            placeholder="Search..."
+            autofocus
+            (keyup)="search($event)"
+          />
+          <span class="icon is-small is-left">
+            <i class="fas fa-search"></i>
+          </span>
+        </p>
+      </div>
+      <div class="box" *ngIf="categories$?.length > 0">
+        <h5 class="subtitle is-5 has-text-weight-bold">Categories</h5>
+        <ul *ngFor="let category of categories$">
+          <li class="has-text-weight-bold" style="padding: 2px 0">
+            <div class="columns">
+              <div class="column is-narrow">
+                <span class="icon">
+                  <i class="fas fa-tools" *ngIf="category.topic === 'Part'"></i>
+                  <i
+                    class="fas fa-bicycle"
+                    *ngIf="category.topic === 'Bike'"
+                  ></i>
+                  <i
+                    class="far fa-sun"
+                    *ngIf="category.topic === 'Accessory'"
+                  ></i>
+                </span>
+              </div>
+              <div class="column">
+                <a
+                  [routerLink]="[
+                    '/products',
+                    getUrlTopic(category.topic),
+                    category.url
+                  ]"
+                  (click)="handleRedirect()"
+                  >{{ category.name }}
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="box" *ngIf="products$?.length > 0">
+        <h5 class="subtitle is-5 has-text-weight-bold">Products</h5>
+        <div *ngFor="let product of products$">
+          <div class="columns">
+            <div class="column is-narrow">
+              <figure class="image is-64x64">
+                <img [src]="product.coverImage.imageUrl" />
+              </figure>
+            </div>
+            <div class="column bikedescription">
+              <a
+                [routerLink]="['/product', product.url]"
+                (click)="handleRedirect()"
+              >
+                <strong>{{ product.title }}</strong>
+              </a>
+              <div class="pricing">
+                <span class="tag is-dark" *ngIf="!product.isDayDeal"
+                  >${{ product.price.toFixed(2) }}</span
+                >
+                <div class="tags has-addons" *ngIf="product.isDayDeal">
+                  <span class="tag is-danger"
+                    >${{ product.discountPrice.toFixed(2) }}</span
+                  >
+                  <span
+                    class="tag is-white has-text-danger has-text-weight-semibold"
+                    >-{{
+                      getDiscountPercentage(
+                        product.discountPrice,
+                        product.price
+                      )
+                    }}%</span
+                  >
+                </div>
+                <div>
+                  <span
+                    class="tag is-white"
+                    style="color: darkgreen; margin-left: 0.25rem"
+                    *ngIf="product.quantity > 0"
+                    >In stock</span
+                  >
+                  <span
+                    class="tag is-white"
+                    style="color: darkgoldenrod; margin-left: 0.25rem"
+                    *ngIf="product.quantity === 0"
+                    >Out of stock</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button
+    class="modal-close is-large"
+    aria-label="close"
+    (click)="toggleModal()"
+  ></button>
+</div>

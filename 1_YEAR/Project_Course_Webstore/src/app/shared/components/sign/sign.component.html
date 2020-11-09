@@ -1,0 +1,44 @@
+<div
+  class="modal"
+  id="login-modal"
+  style="z-index:11;"
+  [class.is-active]="modalIsOpen"
+>
+  <div class="modal-background" (click)="toggleModal()"></div>
+  <div class="modal-content" style="max-width:450px;">
+    <div class="block">
+      <div class="card">
+        <div class="card-content">
+          <h1
+            class="title is-3 has-text-centered"
+            [style.display]="showDefault ? 'block' : 'none'"
+          >
+            Login to Bikeshop
+          </h1>
+          <h1
+            class="title is-3 has-text-centered"
+            [style.display]="showDefault ? 'none' : 'block'"
+          >
+            Join Bikeshop
+          </h1>
+          <div class="tabs is-toggle is-fullwidth">
+            <ul>
+              <li [ngClass]="{ 'is-active': showDefault }">
+                <a id="loginTab" (click)="showLoginForm()">
+                  <span>Login</span>
+                </a>
+              </li>
+              <li [ngClass]="{ 'is-active': !showDefault }">
+                <a id="registerTab" (click)="showRegisterForm()">
+                  <span>Register</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <login *ngIf="showDefault"></login>
+          <register *ngIf="!showDefault"></register>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,107 @@
+Objetos e definicoes de variaveis:Nome e botoes de OLA(nome) e SAIR (ex 3)
+
+Public Class Form1
+     Dim nome As String
+-------------------------------------------------------------------------------------------------------------------------------------
+Private Sub Btn_ola_Click(ByVal sender As system.Object, ByVal e As System.EventArgs) Handles Btn_ola.Click nome = txt_nome.Text
+MessageBox.Show("Olá" + nome + "!", MessageBoxButtons.Ok)
+     End Sub
+-------------------------------------------------------------------------------------------------------------------------------------
+Private Sub Btn_limpar_Click(ByVal sender as System.Object, ByVal e As System.EventArgs) Handles Btn_limpar.Click txt_nome.Text = ""
+Ens Sub
+Ens Class
+
+
+________________________________________________________________________________________________________________________________________
+
+Objetos e Propriedades imagem butao mostrar imagem e sair (ex 1)
+
+Public Class Form1
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click MessageBox.Show("Ola Mundo", MessageBoxButtons.OK)
+End Sub
+End Class
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+Private Sub cmdsair_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdsair.Click Application.Exit()
+End Sub
+End Class
+
+
+
+_______________________________________________________________________________________________________________________________________________________________
+
+Aprender a criar menus atraves do menu strip da toolbox,  cartas e smiles.(ex 5)
+
+Private Sub CopasToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles CopasToolStripMenuItem.Click
+        
+Copas.Visible = True (no caso de copas)
+
+        Alegre.Visible = False
+
+        Triste.Visible = False
+
+        Ouros.Visible = False
+
+        Espadas.Visible = False
+
+        Paus.Visible = False
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Private Sub SairToolStripMenuItem_Click_1(sender As System.Object, e As 
+
+System.EventArgs) Handles SairToolStripMenuItem.Click
+
+        Application.Exit()
+
+    End Sub
+
+End Class
+
+_______________________________________________________________________________________________________________________________________________________________
+
+Trabalhar com menus Inputbox e msgbox,area e perimetro (ex 6)
+
+
+Public Class Form1
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    Private Sub CalcularToolStripMenuItem_Click(sender As System.Object, e As 
+
+System.EventArgs) Handles CalcularToolStripMenuItem.Click
+
+        Dim base, altura, area, perimetro As Single
+
+        base = Val(InputBox("Digite o valor da base"))
+
+        altura = Val(InputBox("digite o valor da altura"))
+
+        area = base * altura
+
+        perimetro = 2 * base + 2 * altura
+
+        area = MsgBox(" A área é igual a:    " & area)
+
+        perimetro = MsgBox(" O perímetro é igual a:    " & perimetro)
+
+    End Sub
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    Private Sub SairToolStripMenuItem_Click(sender As System.Object, e As 
+
+System.EventArgs) Handles SairToolStripMenuItem.Click
+
+        Application.Exit()
+
+    End Sub
+
+End Class
+_____________________________________________________________________________________________________________________________________________________________________
+
+
+
+
+
+
+
+
+
+

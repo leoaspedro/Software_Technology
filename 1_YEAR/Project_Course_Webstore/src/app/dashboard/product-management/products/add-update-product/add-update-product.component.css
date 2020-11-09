@@ -1,0 +1,70 @@
+textarea {
+  resize: none;
+}
+
+.upload-attachment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.box-attachment {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image.is-128x128 {
+  margin: 5px;
+}
+
+.picupload .images img {
+  width: auto;
+}
+
+.picgallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.coverpic {
+  height: 256px;
+  width: 256px;
+}
+
+.relative-objects {
+  position: relative;
+}
+
+.picupload .field.is-grouped {
+  justify-content: center !important;
+}
+
+.picgallery .file-icon {
+  margin-right: 0px;
+}
+
+.divider {
+  height: 1px;
+  width: 100%;
+  background: #ddd;
+  margin: 3rem 0;
+}
+
+.picgallery .file.is-boxed .file-cta {
+  padding: 1rem;
+}
+
+.picsingle {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.selected-bike {
+  border: 2px solid #ddd;
+  border-radius: 4px;
+}

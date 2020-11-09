@@ -1,0 +1,31 @@
+.modal {
+  justify-content: flex-start;
+  padding-top: 2rem;
+}
+
+figure.image.is-64x64,
+.bikedescription {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bikedescription .pricing {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 0.25rem;
+}
+
+a {
+  color: #4a4a4a;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.tags .tag,
+.tags:not(:last-child) {
+  margin-bottom: 0;
+}

@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b0188e58-4ae9-4de9-94cb-017a97b1959a" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1hxkYuoIBLBwyEM321DztZi4ztC" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RunManager" selected="Application.AvlMain">
+    <configuration name="AvlMain" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.assignment1.impl.AvlMain" />
+      <module name="HT20-assignment1AADS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.assignment1.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestMyAVL4Strings.TestLevelsOfSingleElement" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HT20-assignment1AADS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.assignment1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.assignment1" />
+      <option name="MAIN_CLASS_NAME" value="test.assignment1.TestMyAVL4Strings" />
+      <option name="METHOD_NAME" value="TestLevelsOfSingleElement" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestMyAVL4Strings.TestPartialSearch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HT20-assignment1AADS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.assignment1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.assignment1" />
+      <option name="MAIN_CLASS_NAME" value="test.assignment1.TestMyAVL4Strings" />
+      <option name="METHOD_NAME" value="TestPartialSearch" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestMyAVL4Strings.TestPartialSearch" />
+        <item itemvalue="JUnit.TestMyAVL4Strings.TestLevelsOfSingleElement" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b0188e58-4ae9-4de9-94cb-017a97b1959a" name="Default Changelist" comment="" />
+      <created>1600960182067</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600960182067</updated>
+      <workItem from="1600960184433" duration="391000" />
+      <workItem from="1601284463552" duration="941000" />
+      <workItem from="1601285502744" duration="12675000" />
+      <workItem from="1601383831180" duration="3949000" />
+      <workItem from="1601387825608" duration="6851000" />
+      <workItem from="1601453691859" duration="16150000" />
+      <workItem from="1601476656466" duration="2605000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601387806342">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1601387806342" />
+    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1601458748940">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1601458748940" />
+    <state x="449" y="148" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1601285390739">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="449" y="148" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1601285390739" />
+    <state x="566" y="297" width="403" height="236" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1601395917758">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="566" y="297" width="403" height="236" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1601395917758" />
+    <state width="1493" height="424" key="GridCell.Tab.0.bottom" timestamp="1601479268397">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="184" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1601311855772" />
+    <state width="1493" height="424" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601479268397" />
+    <state width="1493" height="424" key="GridCell.Tab.0.center" timestamp="1601479268397">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="184" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1601311855771" />
+    <state width="1493" height="424" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601479268397" />
+    <state width="1493" height="424" key="GridCell.Tab.0.left" timestamp="1601479268397">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="184" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1601311855771" />
+    <state width="1493" height="424" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601479268397" />
+    <state width="1493" height="424" key="GridCell.Tab.0.right" timestamp="1601479268397">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="184" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1601311855772" />
+    <state width="1493" height="424" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601479268397" />
+    <state width="1493" height="22" key="GridCell.Tab.1.bottom" timestamp="1601479268301">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="22" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601479268301" />
+    <state width="1493" height="22" key="GridCell.Tab.1.center" timestamp="1601479268301">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="22" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1601479268301" />
+    <state width="1493" height="22" key="GridCell.Tab.1.left" timestamp="1601479268300">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="22" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1601479268300" />
+    <state width="1493" height="22" key="GridCell.Tab.1.right" timestamp="1601479268301">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="22" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1601479268301" />
+    <state x="249" y="0" key="SettingsEditor" timestamp="1600960248396">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1600960248396" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1601479560335">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1601479560335" />
+    <state x="498" y="306" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1600960254621">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="498" y="306" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.824@0.0.1536.824" timestamp="1600960254621" />
+    <state x="260" y="148" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1601387679083">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="260" y="148" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1601387679083" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/main/assignment1/impl/AvlMain.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/main/assignment1/impl/MyAVL4StringsImpl.java</url>
+          <line>193</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/main/assignment1/impl/MyAVL4StringsImpl.java</url>
+          <line>190</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/main/assignment1/impl/MyAVL4StringsImpl.java</url>
+          <line>195</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/main/assignment1/impl/AvlMain.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/main/assignment1/impl/AvlMain.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/main/assignment1/impl/AvlMain.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/main/assignment1/impl/MyAVL4StringsImpl.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/main/assignment1/impl/MyAVL4StringsImpl.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/main/assignment1/impl/MyAVL4StringsImpl.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/main/assignment1/impl/MyAVL4StringsImpl.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/main/assignment1/impl/MyAVL4StringsImpl.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/main/assignment1/impl/MyAVL4StringsImpl.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/main/assignment1/impl/MyAVL4StringsImpl.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/main/assignment1/impl/MyAVL4StringsImpl.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/main/assignment1/impl/MyAVL4StringsImpl.java</url>
+          <line>77</line>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/main/assignment1/impl/MyAVL4StringsImpl.java</url>
+          <line>79</line>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/main/assignment1/impl/MyAVL4StringsImpl.java</url>
+          <line>81</line>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/main/assignment1/impl/MyAVL4StringsImpl.java</url>
+          <line>82</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/main/assignment1/impl/MyAVL4StringsImpl.java</url>
+          <line>85</line>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/main/assignment1/impl/MyAVL4StringsImpl.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/main/assignment1/impl/MyAVL4StringsImpl.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/main/assignment1/impl/MyAVL4StringsImpl.java</url>
+          <line>88</line>
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/main/assignment1/impl/MyAVL4StringsImpl.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/main/assignment1/impl/MyAVL4StringsImpl.java</url>
+          <line>74</line>
+          <properties class="main.assignment1.impl.MyAVL4StringsImpl" method="balance">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="avl.root.right" />
+        <watch expression="tree.root" />
+        <watch expression="tree.root" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

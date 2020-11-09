@@ -1,0 +1,12 @@
+.file {
+  justify-content: center;
+}
+
+.upload-spinner {
+  height: 200px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

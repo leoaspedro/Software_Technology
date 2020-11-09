@@ -1,0 +1,4 @@
+The user interface is built around the device's multi-touch screen, including a virtual keyboard. 
+The iPhone has Wi-Fi and can connect to cellular networks. 
+An iPhone can shoot video (though this was not a standard feature until the iPhone 3GS), take photos, play music, send and receive email, browse the web, send and receive text messages, follow GPS navigation, record notes, perform mathematical calculations, and receive visual voicemail. 
+Other functionality, such as video games, reference works, and social networking, can be enabled by downloading mobile apps. As of January 2017, Apple's App Store contained more than 2.2 million applications available for the iPhone.

@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="hero-body">
+    <h3 class="title is-3 has-text-centered">
+      <i class="fas fa-fire"></i> Deals of the Day
+    </h3>
+    <section class="section">
+      <div *ngIf="products$ | async; let products; else: loading">
+        <div class="columns is-multiline">
+          <div class="column is-one-quarter" *ngFor="let product of products">
+            <product-item
+              [product]="product"
+              [isModeCustomerView]="true"
+            ></product-item>
+          </div>
+        </div>
+        <div *ngIf="products.length === 0">
+          <empty-state
+            [hasBox]="true"
+            [icon]="'fa-info-circle'"
+            [message]="'Sorry, there are no deals today.'"
+          ></empty-state>
+        </div>
+      </div>
+      <ng-template #loading>
+        <section class="section has-text-centered">
+          <a class="button is-large is-rounded is-loading"></a>
+        </section>
+      </ng-template>
+    </section>
+  </div>
+</div>

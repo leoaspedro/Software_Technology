@@ -1,0 +1,9 @@
+.modal {
+  justify-content: flex-start;
+  padding-top: 2rem;
+}
+
+.tabs.is-toggle li.is-active a {
+  background-color: #424242 !important;
+  border-color: #424242 !important;
+}

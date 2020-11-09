@@ -1,0 +1,74 @@
+<div *ngFor="let category of category$ | async">
+  <div class="container">
+    <div class="hero-body">
+      <div class="box">
+        <figure class="image is-3by1">
+          <img [src]="category.imageUrl" />
+        </figure>
+      </div>
+
+      <section class="hero">
+        <div class="hero-body">
+          <div class="columns">
+            <div class="column">
+              <h1 class="title">
+                {{ category.name }}
+              </h1>
+            </div>
+            <div class="column is-narrow">
+              <div class="select">
+                <select (change)="sortProducts($event)">
+                  <option
+                    *ngFor="let option of filterOptions"
+                    [value]="option.id"
+                  >
+                    {{ option.name }}
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <category-products-products
+        [id]="category.id"
+      ></category-products-products>
+
+      <!-- <nav
+        class="pagination is-centered"
+        role="navigation"
+        aria-label="pagination"
+      >
+        <a class="button pagination-previous">
+          <span class="icon is-small">
+            <i class="fas fa-angle-left"></i>
+          </span>
+        </a>
+  
+        <ul class="pagination-list">
+          <li><a class="pagination-link" aria-label="Goto page 1">1</a></li>
+          <li><span class="pagination-ellipsis">&hellip;</span></li>
+          <li><a class="pagination-link" aria-label="Goto page 45">45</a></li>
+          <li>
+            <a
+              class="pagination-link is-current"
+              aria-label="Page 46"
+              aria-current="page"
+              >46</a
+            >
+          </li>
+          <li><a class="pagination-link" aria-label="Goto page 47">47</a></li>
+          <li><span class="pagination-ellipsis">&hellip;</span></li>
+          <li><a class="pagination-link" aria-label="Goto page 86">86</a></li>
+        </ul>
+  
+        <a class="button pagination-next">
+          <span class="icon is-small">
+            <i class="fas fa-angle-right"></i>
+          </span>
+        </a>
+      </nav> -->
+    </div>
+  </div>
+</div>

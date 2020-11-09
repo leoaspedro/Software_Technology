@@ -1,0 +1,292 @@
+<div class="modal-card">
+  <header class="modal-card-head">
+    <p class="modal-card-title">
+      {{ type === 'add' ? 'Add' : 'Update' }}
+      {{ category?.topic.toLowerCase() }}
+    </p>
+    <button class="delete" aria-label="close" (click)="closeModal()"></button>
+  </header>
+
+  <section class="modal-card-body">
+    <form *ngIf="category" [formGroup]="addUpdateForm">
+      <div *ngIf="!this.isSuccess && !this.isFail">
+        <div class="field">
+          <label class="label">Product images</label>
+          <div class="control">
+            <div class="columns picupload">
+              <div
+                class="column is-narrow"
+                *ngIf="this.productObject.images.length > 0"
+              >
+                <figure class="image coverpic picsingle">
+                  <img [src]="this.selectedBike.imageUrl" />
+                </figure>
+                <div class="field is-grouped" style="margin-top: 1rem">
+                  <p class="control">
+                    <a
+                      class="button"
+                      [ngClass]="{
+                        'is-info':
+                          this.productObject.coverImage.imageUrl ===
+                          this.selectedBike.imageUrl
+                      }"
+                      (click)="changeSelectedBikeData()"
+                    >
+                      <span class="icon">
+                        <i class="fas fa-image"></i>
+                      </span>
+                    </a>
+                  </p>
+                  <p class="control">
+                    <a class="button" (click)="deleteImage()">
+                      <span class="icon">
+                        <i class="fas fa-trash-alt"></i>
+                      </span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div class="column picgallery">
+                <figure
+                  class="image is-128x128 picsingle"
+                  style="cursor: pointer"
+                  *ngFor="
+                    let imageObject of this.productObject.images;
+                    let i = index
+                  "
+                  [ngClass]="{
+                    'selected-bike':
+                      imageObject.imageUrl === this.selectedBike.imageUrl
+                  }"
+                  (click)="changeSelectedBike(imageObject, i)"
+                >
+                  <img [src]="imageObject.imageUrl" />
+                </figure>
+                <div *ngFor="let file of files">
+                  <app-image
+                    [file]="file"
+                    (imageObject)="addImageToArray($event)"
+                  ></app-image>
+                </div>
+              </div>
+            </div>
+            <div class="columns">
+              <div class="column">
+                <div
+                  class="file is-boxed"
+                  *ngIf="this.productObject.images.length < 4"
+                >
+                  <label class="file-label" style="width: 100%">
+                    <input
+                      class="file-input"
+                      type="file"
+                      multiple
+                      (change)="multiFileUpload($event)"
+                    />
+                    <span
+                      class="file-cta"
+                      style="display: flex; justify-content: center"
+                    >
+                      <span class="file-icon">
+                        <i class="fas fa-upload"></i>
+                      </span>
+                      <span class="file-label">Upload images</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="notification is-danger" *ngIf="this.isWarning">
+              <button class="delete" (click)="toggleWarning()"></button>
+              {{ warningMessage }}
+            </div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="field">
+          <label class="label">Category</label>
+          <div class="control">
+            <input class="input" formControlName="categoryName" type="text" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Title</label>
+          <div class="control">
+            <input
+              class="input"
+              formControlName="title"
+              type="text"
+              placeholder="Product title"
+            />
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Description</label>
+          <div class="control">
+            <textarea
+              class="textarea"
+              formControlName="description"
+              placeholder="Product description"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Attachment files</label>
+          <div class="control">
+            <div class="columns">
+              <div
+                class="column is-narrow"
+                *ngIf="this.productObject.file.fileName === ''"
+              >
+                <div class="file is-small is-boxed">
+                  <label class="file-label">
+                    <input
+                      class="file-input"
+                      type="file"
+                      (change)="uploadAttachmentFile($event)"
+                    />
+                    <span class="file-cta">
+                      <span class="file-icon">
+                        <i class="fas fa-upload"></i>
+                      </span>
+                      <span class="file-label">
+                        Select a PDF
+                      </span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <div
+                class="column upload-attachment"
+                *ngIf="this.productObject.file.fileName === ''"
+              >
+                <p *ngIf="!isUploading" style="color: #999">
+                  You haven't uploaded any file yet.
+                </p>
+                <i *ngIf="isUploading" class="fa fa-spinner fa-pulse fa-fw"></i>
+              </div>
+              <div
+                class="column upload-attachment"
+                *ngIf="this.productObject.file.fileName !== ''"
+              >
+                <div class="box box-attachment">
+                  <p class="has-text-weight-semibold">
+                    {{ this.productObject.file.fileName }}
+                  </p>
+                  <p class="buttons">
+                    <a
+                      class="button is-small"
+                      [href]="this.productObject.file.fileUrl"
+                      target="_blank"
+                    >
+                      <span class="icon is-small">
+                        <i class="fas fa-eye"></i>
+                      </span>
+                    </a>
+                    <a class="button is-small" (click)="deleteFileDoc()">
+                      <span class="icon is-small">
+                        <i class="fas fa-times"></i>
+                      </span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Price</label>
+          <div class="control">
+            <input
+              class="input"
+              formControlName="price"
+              type="number"
+              placeholder="Product price (incl. VAT)"
+            />
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Discount price (optional)</label>
+          <div class="control">
+            <input
+              class="input"
+              formControlName="discountPrice"
+              type="number"
+              placeholder="Product discount price (incl. VAT)"
+            />
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Quantity available</label>
+          <div class="control">
+            <input
+              class="input"
+              formControlName="quantity"
+              type="number"
+              placeholder="Quantity of products available"
+            />
+          </div>
+        </div>
+
+        <div class="field" *ngIf="type === 'update'">
+          <label class="label"
+            >Delete {{ category?.topic.toLowerCase() }}</label
+          >
+          <div class="control">
+            <button
+              class="button is-danger"
+              [ngClass]="{ 'is-loading': isDeleting }"
+              (click)="deleteProduct()"
+            >
+              Delete {{ category?.topic.toLowerCase() }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <success-message
+      *ngIf="this.isSuccess"
+      [message]="this.method.past"
+    ></success-message>
+
+    <fail-message
+      *ngIf="this.isFail"
+      [message]="this.method.present"
+    ></fail-message>
+  </section>
+
+  <footer class="modal-card-foot">
+    <button type="button" class="button" (click)="closeModal()">
+      {{ this.isSuccess || this.isFail ? 'Close' : 'Cancel' }}
+    </button>
+    <button
+      type="button"
+      class="button is-success"
+      (click)="onSubmit('add')"
+      [ngClass]="{ 'is-loading': isLoading }"
+      *ngIf="type === 'add' && !this.isSuccess && !this.isFail"
+      [disabled]="addUpdateForm.invalid || productObject.images.length === 0"
+    >
+      Add {{ category?.topic.toLowerCase() }}
+    </button>
+    <button
+      type="button"
+      class="button is-success"
+      (click)="onSubmit('update')"
+      [ngClass]="{ 'is-loading': isLoading }"
+      *ngIf="type === 'update' && !this.isSuccess && !this.isFail"
+      [disabled]="addUpdateForm.invalid || productObject.images.length === 0"
+    >
+      Update {{ category?.topic.toLowerCase() }}
+    </button>
+  </footer>
+</div>

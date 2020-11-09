@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site-content {
+  min-height: calc(100vh - 125px);
+  flex: 1;
+}

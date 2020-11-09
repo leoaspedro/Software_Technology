@@ -1,0 +1,35 @@
+<section class="hero is-dark">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Dashboard
+      </h1>
+      <h2 class="subtitle">
+        Manage your awesome bikeshop.
+      </h2>
+    </div>
+    <div class="container spacing-tabs">
+      <div class="tabs is-toggle is-fullwidth">
+        <ul>
+          <li
+            [routerLinkActive]="'is-active'"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            <a [routerLink]="['/dashboard']">Order Management</a>
+          </li>
+          <li
+            [routerLinkActive]="'is-active'"
+            [routerLinkActiveOptions]="{ exact: false }"
+          >
+            <a [routerLink]="['/dashboard', 'categories']"
+              >Category & Product Management</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

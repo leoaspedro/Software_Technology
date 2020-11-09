@@ -1,0 +1,14 @@
+<span *ngFor="let key of [1, 2, 3, 4, 5]">
+  <span *ngIf="rating >= key; else emptyStar">
+    <span class="icon is-small" *ngIf="!isLarge">
+      <i class="fas fa-star orange"></i>
+    </span>
+    <i class="fas fa-star fa-lg orange" *ngIf="isLarge"></i>
+  </span>
+  <ng-template #emptyStar>
+    <span class="icon is-small" *ngIf="!isLarge">
+      <i class="far fa-star orange"></i>
+    </span>
+    <i class="far fa-star fa-lg orange" *ngIf="isLarge"></i>
+  </ng-template>
+</span>

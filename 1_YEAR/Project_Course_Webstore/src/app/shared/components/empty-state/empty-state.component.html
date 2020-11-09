@@ -1,0 +1,19 @@
+<div class="columns" *ngIf="hasBox">
+  <div class="column">
+    <div class="box">
+      <section class="section has-text-centered">
+        <span class="icon is-large has-text-grey">
+          <i class="fas fa-lg {{ icon }}"></i>
+        </span>
+        <h3 class="subtitle is-size-5 has-text-grey">{{ message }}</h3>
+      </section>
+    </div>
+  </div>
+</div>
+
+<section class="section has-text-centered" *ngIf="!hasBox">
+  <span class="icon is-large has-text-grey">
+    <i class="fas fa-lg {{ icon }}"></i>
+  </span>
+  <h3 class="subtitle is-size-5 has-text-grey">{{ message }}</h3>
+</section>

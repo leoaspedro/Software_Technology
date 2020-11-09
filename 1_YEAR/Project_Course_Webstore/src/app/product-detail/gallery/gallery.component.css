@@ -1,0 +1,13 @@
+.image.is-square img {
+  height: auto;
+}
+
+.centerImage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.image img {
+  padding: 1rem;
+}
